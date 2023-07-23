@@ -1,11 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { React, Fragment } from "react";
 
-function App() {
+// some JSX here
+
+import Login from './components/login/Login';
+// import Home from './container/Home';
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <Fragment>
+      <Login/>
+    </Fragment>
+    
+    
   );
 }
 
