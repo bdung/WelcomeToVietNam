@@ -19,7 +19,7 @@ export default function FoodBanner() {
                     </h2>
                 </div>
 
-                <h5 class="text-end italic text-blue-400 px-10 py-3 font-roboto">
+                <h5 class="text-end italic text-blue-600 px-10 py-3 font-roboto">
                     Khám phá nét đẹp ẩm thực Việt Nam...
                 </h5>
                 <div class="flex flex-col divide-y-8 divide-double divide-yellow-500">
