@@ -41,15 +41,15 @@ const HighlightedSection = () => {
     
     return (
         <React.Fragment>
-            <div className="roboto-bold text-4xl mx-10 mt-6">CÁC BÀI VIẾT NÊN ĐỌC</div>
-            <ul className="mx-10 my-10 flex flex-row lora-regular text-sm lg:text-lg text-bold relative">
-              <li className="text-[#D4A373]">Tất cả</li>
-              <li className="ml-5">Địa phương</li>
-              <li className="ml-5">Nghệ thuật</li>
-              <li className="ml-5">Lễ hội và sự kiện</li>
-              <li className="ml-5">Môi trường</li>
-              <li className="ml-5">Cuộc sống số</li>
-              <span className="absolute right-5">Xem tất cả</span>
+            <div className="font-roboto font-bold text-4xl mx-10 mt-6">CÁC BÀI VIẾT NÊN ĐỌC</div>
+            <ul className="mx-10 my-10 lg:flex flex-row lora-regular text-base lg:text-lg text-bold relative">
+              <li className="hover:underline text-[#D4A373]">Tất cả</li>
+              <li className="hover:underline lg:ml-5">Địa phương</li>
+              <li className="hover:underline lg:ml-5">Nghệ thuật</li>
+              <li className="hover:underline lg:ml-5">Lễ hội và sự kiện</li>
+              <li className="hover:underline lg:ml-5">Môi trường</li>
+              <li className="hover:underline lg:ml-5">Cuộc sống số</li>
+              <span className="hover:underline absolute right-5">Xem tất cả</span>
             </ul>
             {/* <div class="inline-flex items-center justify-center w-full"> */}
               {/* <hr class="w-1/2 h-1 my-8 bg-[#068096] border-0 rounded dark:bg-gray-700" /> */}

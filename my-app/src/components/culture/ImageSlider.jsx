@@ -51,6 +51,7 @@ const ImageSlider = ({slides}) => {
             </div>
             <div className="flex flex-row absolute bottom-1 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 {slides.map((slide, slideIndex) => (
+                    
                     <FaCircle className="mx-3 text-white cursor-pointer text-base lg:text-2xl" 
                     key={slideIndex}
                     onClick={() => goToSlide(slideIndex)}/>

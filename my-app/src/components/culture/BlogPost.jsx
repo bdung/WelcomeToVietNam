@@ -17,15 +17,15 @@ const BlogPost = ({postInfo}) => {
                         </div>
                         <div className="mt-1 text-2xl leading-tight font-medium text-black hover:underline text-ellipsis overflow-hidden roboto-bold text-wrap-2-line">{postInfo.title}</div>
                         <div className="mt-5 flex flex-row justify-between align-middle">
-                            <div className="flex flex-row text-xs">
-                                <FaHeart className="text-[#CC3333] ml-1"></FaHeart>
+                            <div className="flex flex-row text-sm">
+                                <FaHeart className="mt-0.5 text-[#CC3333] ml-1"></FaHeart>
                                 <p className="text-slate-500 ml-1">{postInfo.like}</p>
-                                <FaComment className="ml-1"></FaComment>
+                                <FaComment className="mt-0.5 ml-2"></FaComment>
                                 <p className="text-slate-500 ml-1">{postInfo.comment}</p>
                             </div>
                             <div className="flex flex-row">
                                 <p className="text-slate-500 text-sm hover:text-slate-800">Xem thêm</p>
-                                <FaArrowRight className="ml-1 text-lg text-[#1AA1D5]"></FaArrowRight>
+                                <FaArrowRight className="ml-1 mt-0.5 text-lg text-[#1AA1D5]"></FaArrowRight>
                             </div>
                         </div>
                     </div>

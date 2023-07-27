@@ -48,12 +48,23 @@
 }
 
 @font-face {
-  font-family: RobotoBold;
+  font-family: Roboto;
   src: url(../public/assets/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../public/assets/Roboto-Light.ttf);
+  font-weight: light;
 }
 
 .roboto-bold {
-  font-family: RobotoBold;
+  font-family: Roboto;
+}
+
+.roboto-light {
+  font-family: Roboto;
 }
 
 @font-face {
