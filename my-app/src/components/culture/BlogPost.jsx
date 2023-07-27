@@ -2,28 +2,32 @@ import React from 'react';
 import {FaArrowRight, FaHeart, FaComment} from 'react-icons/fa'
 
 const BlogPost = ({postInfo}) => {
+
     return (
         <React.Fragment>
-            <div className="max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl relative">
-                <div className="md:flex">
-                    <div className="md:shrink-0">
-                        <img className="h-48 w-full object-cover md:h-full md:w-48" src={postInfo.url} alt="Modern building architecture"/>
+            <div className="max-w-[240px] mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl relative">
+                <div className="md:flex flex-col">
+                    <div className="md:shrink-0 ">
+                        <img className="h-48 w-full object-cover md:h-full md:w-48" src={postInfo.url} alt={postInfo.title}/>
                     </div>
-                    <div className="p-8">
+                    <div className="p-5">
                         <div className="flex flex-row justify-between">
-                            <div className="italic"> Ngày đăng {postInfo.uploadTime}</div>
-                            <div className="italic">{postInfo.timeForRead}</div>
+                            <div className="text-xs md:text-lg text-slate-400 italic"> Ngày đăng {postInfo.uploadTime}</div>
+                            <div className="text-xs md:text-lg text-slate-400 italic">{postInfo.timeForRead}</div>
                         </div>
-                        <a href="#" className="block mt-1 text-2xl leading-tight font-medium text-black hover:underline text-ellipsis overflow-hidden">{postInfo.title}</a>
-                        <div className="absolute bottom-3 mt-5 flex flex-row justify-start">
-                            <FaHeart className="text-lg"></FaHeart>
-                            <p className="text-slate-500 mx-1">{postInfo.like}</p>
-                            <FaComment className="text-lg mx-2"></FaComment>
-                            <p className="text-slate-500">{postInfo.comment}</p>
-                            <p className="mx-2 text-slate-500">Xem thêm</p>
-                            <FaArrowRight className="text-lg"></FaArrowRight>
+                        <div className="mt-1 text-2xl leading-tight font-medium text-black hover:underline text-ellipsis overflow-hidden roboto-bold text-wrap-2-line">{postInfo.title}</div>
+                        <div className="mt-5 flex flex-row justify-between align-middle">
+                            <div className="flex flex-row text-xs">
+                                <FaHeart className="text-[#CC3333] ml-1"></FaHeart>
+                                <p className="text-slate-500 ml-1">{postInfo.like}</p>
+                                <FaComment className="ml-1"></FaComment>
+                                <p className="text-slate-500 ml-1">{postInfo.comment}</p>
+                            </div>
+                            <div className="flex flex-row">
+                                <p className="text-slate-500 text-sm hover:text-slate-800">Xem thêm</p>
+                                <FaArrowRight className="ml-1 text-lg text-[#1AA1D5]"></FaArrowRight>
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>

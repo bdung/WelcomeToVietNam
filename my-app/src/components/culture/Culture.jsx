@@ -22,10 +22,10 @@ const CultureScreen = () => {
 
   return (
     <div>
-      <div className="max-w-full h-[522px] w-full m-auto relative group">
+      <div className="max-w-full h-96 w-full m-auto relative group">
         <ImageSlider slides={slides} />
-        <MainContent/>
       </div>
+      <MainContent/>
     </div>
   );
 };
