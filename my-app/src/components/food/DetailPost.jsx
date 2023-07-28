@@ -8,10 +8,14 @@ import FOOD3 from "./food3.jpg";
 export default function FoodBody() {
     return (
         <React.Fragment>
-            <section class="max-w-4x1 mx-auto">
-                <div class="bg-white rounded-lg mx-10 py-10 border-dashed border-2 border-cyan-300">
+            <section class="max-w-4x1 mx-auto py-10">
+                <div class="bg-white rounded-lg mx-20 py-10 border-dashed border-2 border-cyan-300 relative">
+                    <div class="absolute right-10">
+                        <BsBookmark class="text-sm text-right" />
+                    </div>
+
                     <div id="title" class="px-10 py-5 pb-20 text-center">
-                        <h1 class="font-roboto font-semibold text-xl">Văn hóa ẩm thực của Việt Nam đa dạng như thế nào?</h1>
+                        <h1 class="font-roboto font-semibold text-2xl">Văn hóa ẩm thực của Việt Nam đa dạng như thế nào?</h1>
                     </div>
 
                     <div id="top" class="columns-2">
@@ -35,8 +39,6 @@ export default function FoodBody() {
                             <p class="my-5 font-roboto font-light italic">
                                 3 phút đọc
                             </p>
-
-                            <BsBookmark class="text-sm text-right" />
 
                         </div>
                     </div>
