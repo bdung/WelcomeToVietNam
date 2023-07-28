@@ -47,15 +47,15 @@ const HighlightedSection = () => {
         <React.Fragment>
       
             <div className="mt-10 flex items-center justify-center max-w-screen-lg mx-auto relative">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mr-10"> 
-                {
-                  posts.map((post, postIndex) => (
-                    <BlogPost postInfo={post} key={postIndex}/>)) 
-                }
-              </div>
-              <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-4xl text-[#1AA1D5] cursor-pointer">
-                <FaAngleRight/>
-            </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mr-10"> 
+                    {
+                    posts.map((post, postIndex) => (
+                        <BlogPost postInfo={post} key={postIndex}/>)) 
+                    }
+                </div>
+                <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-4xl text-[#1AA1D5] cursor-pointer">
+                    <FaAngleRight/>
+                </div>
 
             </div>
             

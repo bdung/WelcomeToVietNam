@@ -4,6 +4,7 @@ import { BsBookmark } from 'react-icons/bs'
 import FOOD1 from "./food1.jpg";
 import FOOD2 from "./food2.jpg";
 import FOOD3 from "./food3.jpg";
+import CommentSection from "./CommentSection";
 
 export default function FoodBody() {
     return (
@@ -90,6 +91,7 @@ export default function FoodBody() {
                     <div id="comment" class="">
                         <p class="italic text-blue-400 px-10 py-3 font-roboto">
                             24 bình luận
+                            <CommentSection/>
                         </p>
                     </div>
 
