@@ -1,5 +1,6 @@
 import React from "react";
 import HighlightedSection from "./HighlightedSection";
+import LatestSection from "./LatestSection";
 
 export default function FoodBody() {
     return (
@@ -27,7 +28,7 @@ export default function FoodBody() {
                         <h4 class="underline underline-offset-4 decoration-4 decoration-yellow-200 font-roboto font-semibold text-2xl uppercase">Bài viết mới nhất</h4>
                         <h4 class="font-roboto font-light text-md text-center">Các chủ đề ẩm thực <em class="text-red text-bold">mới nhất</em> gần đây</h4>
                         
-                        <HighlightedSection/>
+                        <LatestSection/>
 
                     </div>
                 </div>
