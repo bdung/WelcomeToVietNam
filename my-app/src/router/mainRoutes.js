@@ -12,7 +12,7 @@ const mainRoutes = () =>{
                     <Route path="/" element={<Home/>}/>
                     <Route path="login" element={<LogIn/>} />
 
-                    
+
                 </Routes>
 
             </BrowserRouter>

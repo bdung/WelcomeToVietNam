@@ -1,4 +1,3 @@
-import './App.css';
 import { React, Fragment } from "react";
 import MainRoutes from "./router/mainRoutes";
 
