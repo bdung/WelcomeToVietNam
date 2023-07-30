@@ -1,18 +1,16 @@
 import './App.css';
 import { React, Fragment } from "react";
+import MainRoutes from "./router/mainRoutes";
 
 // some JSX here
 
-import Login from './components/login/Login';
-// import Home from './container/Home';
 
 const App = () => {
   return (
     <Fragment>
-      <Login/>
+      <MainRoutes/>
     </Fragment>
-    
-    
+        
   );
 }
 
