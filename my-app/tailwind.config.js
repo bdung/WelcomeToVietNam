@@ -24,6 +24,11 @@ module.exports = {
       lg: "1200px",
       xl: "1700px",
     },
+    extend: {
+      fontFamily: {
+        princess: ['"Princess Sofia"']
+      }
+    }
   },
   plugins: [],
 };
