@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: BeVietNamProRegular;
+  src: url(../public/assets/BeVietnamPro-Regular.ttf);
+}
+
+.be-viet-nam-pro-regular {
+  font-family: BeVietNamProRegular;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../public/assets/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../public/assets/Roboto-Light.ttf);
+  font-weight: light;
+}
+
+.roboto-bold {
+  font-family: Roboto;
+}
+
+.roboto-light {
+  font-family: Roboto;
+}
+
+@font-face {
+  font-family: LoraRegular;
+  src: url(../public/assets/Lora-Regular.ttf);
+}
+
+.lora-regular {
+  font-family: LoraRegular;
+}
+
+
+.drop-shadow {
+  text-shadow:
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px black;
+}
+
+.text-wrap-2-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
