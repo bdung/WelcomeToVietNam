@@ -1,4 +1,3 @@
-import './App.css';
 import { React, Fragment } from "react";
 import {BrowserRouter as Router} from "react-router-dom"
 import { Route, Routes} from "react-router";
