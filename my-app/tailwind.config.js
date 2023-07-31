@@ -1,12 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      
-      'lg': {'min': '768px'},
+      lg: { min: "768px" },
       // // => @media (min-width: 640px and max-width: 767px) { ... }
 
       // 'md': {'min': '768px', 'max': '1023px'},
@@ -23,5 +20,9 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+  variants: {
+    extend: {
+      scale: ["hover"],
+    },
+  },
+};

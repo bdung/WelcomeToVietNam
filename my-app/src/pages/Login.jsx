@@ -1,5 +1,5 @@
 import React from "react";
-import IMAGE_COVER from "./image_cover.jpg";
+import IMAGE_COVER from "../assets/images/image_cover_login.jpg";
 import {FaFacebookF, FaGoogle} from 'react-icons/fa'
 
 
