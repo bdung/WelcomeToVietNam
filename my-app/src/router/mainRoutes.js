@@ -11,8 +11,6 @@ const mainRoutes = () =>{
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="login" element={<LogIn/>} />
-
-
                 </Routes>
 
             </BrowserRouter>
