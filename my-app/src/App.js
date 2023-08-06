@@ -29,7 +29,7 @@ const App = () => {
 					
 
 					</Route>
-					<Route path="culture" element = {<CultureScreen/>}></Route>
+					<Route path="/culture" element = {<CultureScreen/>}></Route>
 				</Route>
 				
 				<Route path="/login" element={<LoginScreen />} />
