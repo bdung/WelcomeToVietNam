@@ -10,7 +10,6 @@
 // import  { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 // import slide_image_1 from '../assets/images/ha_long_bay.travel.jpg';
 // import slide_image_2 from '../assets/images/hoi_an.travel.jpg';
 // import slide_image_3 from '../assets/images/nha_tho.travel.jpg';
@@ -81,68 +80,66 @@
 // }
 
 // export default App;
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
-import '../index.css';
+import "../index.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function App() {
-  return (
-    <>
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper>
-    </>
-  );
+	return (
+		<>
+			<Swiper
+				effect={"coverflow"}
+				grabCursor={true}
+				centeredSlides={true}
+				slidesPerView={"auto"}
+				coverflowEffect={{
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: true,
+				}}
+				pagination={true}
+				modules={[EffectCoverflow, Pagination]}
+				className="mySwiper"
+			>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+				</SwiperSlide>
+			</Swiper>
+		</>
+	);
 }
-

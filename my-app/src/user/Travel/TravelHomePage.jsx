@@ -1,12 +1,11 @@
 import LandingPage from "../../components/LandingPage";
-import SmallPost from "../../components/SmallPost";
+import React from "react";
 
-export default function TravelHomePage(){
-    return (
-        <div>
-            <LandingPage/>
-            <p>hello</p>
-            
-        </div>
-    )
+export default function TravelHomePage() {
+	return (
+		<div>
+			<LandingPage />
+			<p>hello</p>
+		</div>
+	);
 }
