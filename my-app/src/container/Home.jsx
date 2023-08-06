@@ -1,6 +1,6 @@
 import styles from "../style"
 import React from 'react'
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../user/navbar/Navbar";
 
 const Home = () => {
   return (
