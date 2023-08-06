@@ -5,6 +5,8 @@ module.exports = {
   ],
   mode: "jit",
   theme: {
+    screens: {
+      lg: { min: "768px" },},
     extend: {
       colors: {
         primary: "#00040f",
@@ -14,8 +16,8 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-      },
-    },
+      },},
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
     screens: {
       xs: "480px",
       ss: "620px",
@@ -31,5 +33,9 @@ module.exports = {
     }
   },
   plugins: [],
+  variants: {
+    extend: {
+      scale: ["hover"],
+    },
+  },
 };
-

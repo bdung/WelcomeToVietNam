@@ -1,6 +1,8 @@
 import React from "react";
-import IMAGE_COVER from "./image_cover.jpg";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
+import IMAGE_COVER from "../assets/images/image_cover_login.jpg";
+import {FaFacebookF, FaGoogle} from 'react-icons/fa'
+
 
 export default function LoginScreen() {
   return (
