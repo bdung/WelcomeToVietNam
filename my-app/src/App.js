@@ -10,6 +10,8 @@ import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
 import UserLayout from "./user/UserLayout";
 import FoodScreen from "./user/food/FoodPage";
 import CultureScreen from "./user/culture/MainContent";
+import AdminHomeScreen from "./admin/AdminHomePage";
+import CreatePostScreen from "./admin/createdPost";
 import Error from "./pages/Error";
 
 const App = () => {
@@ -25,15 +27,16 @@ const App = () => {
 							element={<DetailedTravelBlog />}
 						/>
 					</Route>
-					<Route path="food" element = {<FoodScreen/>}>
-					
-
-					</Route>
-					<Route path="culture" element = {<CultureScreen/>}></Route>
+					<Route path="food" element={<FoodScreen />}></Route>
+					<Route path="culture" element={<CultureScreen />}></Route>
 				</Route>
-				
+
 				<Route path="/login" element={<LoginScreen />} />
 				<Route path="/register" element={<Register />} />
+				<Route path="/admin" element={<AdminHomeScreen />}>
+					
+				</Route>
+				<Route path="/create-post" element={<CreatePostScreen />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</div>
