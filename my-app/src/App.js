@@ -9,7 +9,8 @@ import TravelHomePage from "./user/Travel/TravelHomePage";
 import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
 import UserLayout from "./user/UserLayout";
 import FoodScreen from "./user/food/FoodPage";
-import CultureScreen from "./user/culture/MainContent";
+import CultureScreen from "./user/culture/Culture";
+import DetailedCultureBlog from "./user/culture/details/DetailedCultureBlog";
 import AdminHomeScreen from "./admin/AdminHomePage";
 import CreatePostScreen from "./admin/createdPost";
 import Error from "./pages/Error";
@@ -28,7 +29,11 @@ const App = () => {
 						/>
 					</Route>
 					<Route path="food" element={<FoodScreen />}></Route>
-					<Route path="culture" element={<CultureScreen />}></Route>
+					<Route path="culture" element={<CultureScreen />}/>
+					<Route
+								path="/culture/view-blog/:blogId"
+								element={<DetailedCultureBlog />}
+						/>
 				</Route>
 
 				<Route path="/login" element={<LoginScreen />} />

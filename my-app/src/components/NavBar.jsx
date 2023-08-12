@@ -1,5 +1,6 @@
 import React from 'react'
 import {BiLogoLinkedinSquare,BiLogoFacebook,BiLogoYoutube,BiLogoTiktok,BiLogoTwitter} from "react-icons/bi";
+
 function Navbar() {
    const verticalLine = {
       borderLeft: "2px solid white ",
@@ -7,7 +8,7 @@ function Navbar() {
    }
   
   return (
-   <nav className="w-full flex py-6 justify-between items-center navbar bg-black opacity-30 absolute">
+   <nav className="z-10 w-full flex py-6 justify-between items-center navbar bg-black opacity-50 absolute">
 
    <ul className="list-none sm:flex hidden justify-end items-center flex-1 mr-8 ">
     
