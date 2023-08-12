@@ -10,8 +10,11 @@ import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
 import UserLayout from "./user/UserLayout";
 import FoodScreen from "./user/food/FoodPage";
 import CultureScreen from "./user/culture/MainContent";
+import AdminHomeScreen from "./admin/AdminHomePage";
+import CreatePostScreen from "./admin/createdPost";
 import Error from "./pages/Error";
 import Test from './user/Test.jsx';
+import Search from "./user/Search";
 
 const App = () => {
 	return (
@@ -29,11 +32,16 @@ const App = () => {
 					</Route>
 					<Route path="food" element = {<FoodScreen/>}/>
 					<Route path="culture" element = {<CultureScreen/>}/>
+					<Route path="/search" element={<Search/>}/>
 				</Route>
-				
+			
 				<Route path="/test" element={<Test/>}/>
 				<Route path="/login" element={<LoginScreen />} />
 				<Route path="/register" element={<Register />} />
+				<Route path="/admin" element={<AdminHomeScreen />}>
+					
+				</Route>
+				<Route path="/create-post" element={<CreatePostScreen />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</div>
