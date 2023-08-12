@@ -18,12 +18,6 @@ import LoginScreen from "./pages/Login";
 import Register from "./pages/Register";
 import Search from "./user/Search";
 import Test from "./user/Test.jsx";
-import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
-import TravelHomePage from "./user/Travel/TravelHomePage";
-import UserHomePage from "./user/UserHomePage";
-import UserLayout from "./user/UserLayout";
-import CultureScreen from "./user/culture/Culture";
-import FoodScreen from "./user/food/FoodPage";
 
 function Page(props) {
 	if (props === 1) return <UserHomePage />;
@@ -40,8 +34,7 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<UserLayout />}>
 					<Route path="" element={Page(props)} />
-					<Route path="travel" element={<Outlet />}>
-						<Route index element={<TravelHomePage />} />
+					<Route path="travel" element={<TravelHomePage />}>
 						<Route
 							path="view-blog/:blogId"
 							element={<DetailedTravelBlog />}

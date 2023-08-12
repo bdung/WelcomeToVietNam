@@ -223,7 +223,7 @@ export default function TravelHomePage() {
           </li>
           <div className="ml-auto">
             <span className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10">
-              Xem tất cả >
+              Xem tất cả 
             </span>
           </div>
         </ul>
