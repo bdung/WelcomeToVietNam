@@ -15,6 +15,8 @@ import DashboardAdminScreen from "./admin/dashboard.admin";
 import CreatePostScreen from "./admin/createdPost";
 import Error from "./pages/Error";
 import AdminLayout from "./admin/adminLayout";
+import Test from './user/Test.jsx';
+import Search from "./user/Search";
 
 function Page(props) {
 	if (props === 1) return <UserHomePage />;
@@ -40,11 +42,14 @@ const App = () => {
 							path="view-blog/:blogId"
 							element={<DetailedTravelBlog />}
 						/>
+						
 					</Route>
-					<Route path="food" element={<FoodScreen />}></Route>
-					<Route path="culture" element={<CultureScreen />}></Route>
+					<Route path="food" element = {<FoodScreen/>}/>
+					<Route path="culture" element = {<CultureScreen/>}/>
+					<Route path="/search" element={<Search/>}/>
 				</Route>
-
+			
+				<Route path="/test" element={<Test/>}/>
 				<Route path="/login" element={<LoginScreen />} />
 				<Route path="/register" element={<Register />} />
 
