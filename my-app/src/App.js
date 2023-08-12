@@ -11,6 +11,7 @@ import UserLayout from "./user/UserLayout";
 import FoodScreen from "./user/food/FoodPage";
 import CultureScreen from "./user/culture/MainContent";
 import Error from "./pages/Error";
+import Test from './user/Test.jsx';
 
 const App = () => {
 	return (
@@ -24,14 +25,13 @@ const App = () => {
 							path="view-blog/:blogId"
 							element={<DetailedTravelBlog />}
 						/>
+						
 					</Route>
-					<Route path="food" element = {<FoodScreen/>}>
-					
-
-					</Route>
-					<Route path="/culture" element = {<CultureScreen/>}></Route>
+					<Route path="food" element = {<FoodScreen/>}/>
+					<Route path="culture" element = {<CultureScreen/>}/>
 				</Route>
 				
+				<Route path="/test" element={<Test/>}/>
 				<Route path="/login" element={<LoginScreen />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="*" element={<Error />} />
