@@ -1,22 +1,22 @@
 import React from "react";
 // some JSX here
 
-import Register from "./pages/Register";
-import LoginScreen from "./pages/Login";
 import { Outlet, Route, Routes } from "react-router-dom";
-import UserHomePage from "./user/UserHomePage";
-import TravelHomePage from "./user/Travel/TravelHomePage";
-import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
-import UserLayout from "./user/UserLayout";
-import FoodScreen from "./user/food/FoodPage";
-import CultureScreen from "./user/culture/Culture";
 import AdminHomeScreen from "./admin/AdminHomePage";
-import DashboardAdminScreen from "./admin/dashboard.admin";
-import CreatePostScreen from "./admin/createdPost";
-import Error from "./pages/Error";
 import AdminLayout from "./admin/adminLayout";
-import Test from './user/Test.jsx';
+import CreatePostScreen from "./admin/createdPost";
+import DashboardAdminScreen from "./admin/dashboard.admin";
+import Error from "./pages/Error";
+import LoginScreen from "./pages/Login";
+import Register from "./pages/Register";
 import Search from "./user/Search";
+import Test from "./user/Test.jsx";
+import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
+import TravelHomePage from "./user/Travel/TravelHomePage";
+import UserHomePage from "./user/UserHomePage";
+import UserLayout from "./user/UserLayout";
+import CultureScreen from "./user/culture/Culture";
+import FoodScreen from "./user/food/FoodPage";
 
 function Page(props) {
 	if (props === 1) return <UserHomePage />;
@@ -27,34 +27,33 @@ function AdminPage(props) {
 	else return <FoodScreen />;
 }
 const App = () => {
-	var props = 2;
+	var props = 1;
 	return (
 		<div className="App">
 			<Routes>
-				<Route path="/" element={Page(props)}>
-					<Route path="/admin" element={<AdminLayout />}>
-						<Route path="" element={<DashboardAdminScreen />} />
-						<Route path="post" element={<AdminHomeScreen />} />
-					</Route>
+				<Route path="/" element={<UserLayout />}>
+					<Route path="" element={Page(props)} />
 					<Route path="travel" element={<Outlet />}>
 						<Route index element={<TravelHomePage />} />
 						<Route
 							path="view-blog/:blogId"
 							element={<DetailedTravelBlog />}
 						/>
-						
 					</Route>
-					<Route path="food" element = {<FoodScreen/>}/>
-					<Route path="culture" element = {<CultureScreen/>}/>
-					<Route path="/search" element={<Search/>}/>
-				</Route>
-			
-				<Route path="/test" element={<Test/>}/>
-				<Route path="/login" element={<LoginScreen />} />
-				<Route path="/register" element={<Register />} />
+					<Route path="food" element={<FoodScreen />} />
+					<Route path="culture" element={<CultureScreen />} />
+					<Route path="/search" element={<Search />} />
+					<Route path="/test" element={<Test />} />
+					<Route path="/login" element={<LoginScreen />} />
+					<Route path="/register" element={<Register />} />
 
-				<Route path="/create-post" element={<CreatePostScreen />} />
-				<Route path="*" element={<Error />} />
+					<Route path="/create-post" element={<CreatePostScreen />} />
+					<Route path="*" element={<Error />} />
+				</Route>
+				<Route path="/admin" element={<AdminLayout />}>
+					<Route path="" element={<DashboardAdminScreen />} />
+					<Route path="post" element={<AdminHomeScreen />} />
+				</Route>
 			</Routes>
 		</div>
 	);

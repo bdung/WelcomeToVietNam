@@ -1,35 +1,22 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import Model from "./layoutPost";
 import TextEditor from "./textEditor";
 
 import {
-	Navbar,
-	MobileNav,
-	Typography,
-	Button,
-	Menu,
-	MenuHandler,
-	MenuList,
-	MenuItem,
-	Avatar,
-	Card,
-	IconButton,
-	Checkbox,
-} from "@material-tailwind/react";
-import {
-	CubeTransparentIcon,
-	UserCircleIcon,
-	CodeBracketSquareIcon,
-	Square3Stack3DIcon,
 	ChevronDownIcon,
 	Cog6ToothIcon,
 	InboxArrowDownIcon,
 	LifebuoyIcon,
-	PowerIcon,
-	RocketLaunchIcon,
-	Bars2Icon,
+	UserCircleIcon
 } from "@heroicons/react/24/outline";
+import {
+	Button,
+	Menu,
+	MenuHandler,
+	MenuItem,
+	MenuList,
+	Typography
+} from "@material-tailwind/react";
 const profileMenuItems = [
 	{
 		label: "Du lịch",
@@ -129,12 +116,31 @@ export default function AdminHomePage() {
 						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
 					/>
 				</div>
-
-				<h3 class="block mb-2 text-sm font-medium text-gray-900 ">
+				<div>
+					<label
+						class="block mb-2 mt-5 text-sm font-medium text-gray-900 "
+						for="file_input"
+					>
+						Chọn ảnh tiêu đề
+					</label>
+					<input
+						class="font-poppins block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
+						aria-describedby="file_input_help"
+						id="file_input"
+						type="file"
+					/>
+					<p
+						class="mt-1 text-sm text-gray-500 dark:text-gray-300"
+						id="file_input_help"
+					>
+						SVG, PNG, JPG or GIF (MAX. 800x400px).
+					</p>
+				</div>
+				<h3 class="block mb-2 mt-5 text-sm font-medium text-gray-900 ">
 					Chọn chủ đề
 				</h3>
-				<ul class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
-					<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+				<ul class="w-48 text-sm font-medium text-gray-900 bg-white ">
+					<li class="w-full ">
 						<div class="flex items-center pl-3">
 							<input
 								id="list-radio-license"
@@ -227,7 +233,8 @@ export default function AdminHomePage() {
 					<button
 						class="text-white text-sm rounded-lg px-5 py-1.5
 					 bg-blue-500 hover:bg-blue-600 text-center mr-3 
-					 "onClick={() => setShowModal(true)}
+					 "
+						onClick={() => setShowModal(true)}
 					>
 						Hủy
 					</button>
@@ -235,7 +242,6 @@ export default function AdminHomePage() {
 						class="text-white text-sm rounded-lg px-5 py-1.5
 					 bg-blue-500 hover:bg-blue-600 text-center  
 					 "
-						
 					>
 						Lưu
 					</button>

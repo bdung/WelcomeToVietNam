@@ -1,30 +1,21 @@
-import React from "react";
 import {
-	Navbar,
-	MobileNav,
-	Typography,
-	Button,
-	Menu,
-	MenuHandler,
-	MenuList,
-	MenuItem,
-	Avatar,
-	Card,
-	IconButton,
-} from "@material-tailwind/react";
-import {
-	CubeTransparentIcon,
-	UserCircleIcon,
-	CodeBracketSquareIcon,
-	Square3Stack3DIcon,
 	ChevronDownIcon,
 	Cog6ToothIcon,
 	InboxArrowDownIcon,
 	LifebuoyIcon,
 	PowerIcon,
-	RocketLaunchIcon,
-	Bars2Icon,
+	UserCircleIcon
 } from "@heroicons/react/24/outline";
+import {
+	Button,
+	Menu,
+	MenuHandler,
+	MenuItem,
+	MenuList,
+	Navbar,
+	Typography
+} from "@material-tailwind/react";
+import React from "react";
 
 // profile menu component
 const profileMenuItems = [
