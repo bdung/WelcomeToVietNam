@@ -2,12 +2,12 @@ import React from 'react';
 // import { useState, useEffect } from 'react';
 import BlogPost from './BlogPost';
 import PaginationBar from './PaginationBar';
-import FOOD1 from "./food1.jpg";
-import FOOD2 from "./food2.jpg";
-import FOOD3 from "./food3.jpg";
-import FOOD4 from "./food4.png";
-import FOOD6 from "./food6.jpg";
-import FOOD7 from "./food7.jpg";
+import FOOD1 from "../../assets/images/food1.jpg";
+import FOOD2 from "../../assets/images/food2.jpg";
+import FOOD3 from "../../assets/images/food3.jpg";
+import FOOD4 from "../../assets/images/food4.png";
+import FOOD6 from "../../assets/images/food6.jpg";
+import FOOD7 from "../../assets/images/food7.jpg";
 
 const LatestSection = () => {
 
@@ -61,6 +61,23 @@ const LatestSection = () => {
             comment: "13"
         },
         
+        {
+            url: `url(${FOOD4})`,
+            title: `Top 10 món ăn không thể thiếu vào ngày Tết 2024`,
+            uploadTime: "03/04/2023",
+            timeForRead: "2 phút đọc",
+            like: "420",
+            comment: "13"
+        },
+        {
+          url: `url(${FOOD6})`,
+          title: `Ảnh hưởng về văn hóa và yếu tố khí hậu, địa lý của từng vùng miền...`,
+          uploadTime: "03/04/2023",
+          timeForRead: "2 phút đọc",
+          like: "420",
+          comment: "13"
+        },
+        
     ];
 
     // const [data, setData] = useState({})
@@ -87,7 +104,7 @@ const LatestSection = () => {
         <React.Fragment>
 
             <div className="mt-10 flex items-center justify-center max-w-screen-lg container mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 {
                   posts.map((post, postIndex) => (
                     <BlogPost postInfo={post} key={postIndex}/>)) 

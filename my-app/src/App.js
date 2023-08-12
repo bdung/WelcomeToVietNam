@@ -9,6 +9,7 @@ import TravelHomePage from "./user/Travel/TravelHomePage";
 import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
 import UserLayout from "./user/UserLayout";
 import FoodScreen from "./user/food/FoodPage";
+import DetailedFoodBlog from "./user/food/FoodDetailPage";
 import CultureScreen from "./user/culture/MainContent";
 import AdminHomeScreen from "./admin/AdminHomePage";
 import CreatePostScreen from "./admin/createdPost";

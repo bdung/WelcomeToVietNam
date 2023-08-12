@@ -16,11 +16,11 @@ const BlogPost = ({postInfo}) => {
                         />
                     </div>
                     <div className="p-5">
-                        <div className="flex flex-row justify-between">
-                            <div className="text-xs md:text-lg text-slate-400 italic"> Ngày đăng {postInfo.uploadTime}</div>
-                            <div className="text-xs md:text-lg text-slate-400 italic">{postInfo.timeForRead}</div>
+                    <div className="flex flex-row justify-between">
+                            <div className=" md:text-lg text-slate-400 italic " style ={{fontSize:'12px'}}> Ngày đăng {postInfo.uploadTime}</div>
+                            <div className=" md:text-lg text-slate-400 italic " style ={{fontSize:'12px'}}>{postInfo.timeForRead}</div>
                         </div>
-                        <div className="mt-1 text-xl leading-tight font-medium text-black hover:underline text-ellipsis overflow-hidden roboto-bold text-wrap-2-line">{postInfo.title}</div>
+                        <div className="mt-1 text-lg leading-tight font-medium text-black hover:underline text-ellipsis overflow-hidden roboto-bold text-wrap-2-line">{postInfo.title}</div>
                         <div className="mt-5 flex flex-row justify-between align-middle">
                             <div className="flex flex-row text-sm">
                                 <FaHeart className="mt-0.5 text-[#CC3333] ml-1"></FaHeart>
