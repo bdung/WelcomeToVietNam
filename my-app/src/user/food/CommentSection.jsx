@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoMdSend } from "react-icons/io";
-import AVATAR1 from "./avatar1.jpg";
+import AVATAR1 from "../../assets/images/avatar1.jpg";
 
 const CommentSection = () => {
     const comments = [
