@@ -19,8 +19,8 @@ export default function FoodBody() {
                             <span className="hover:underline absolute right-5">Xem tất cả</span>
                         </ul> */}
                         <div class="px-10 pr-10">
-                            <div className="font-medium text-4xl my-6 uppercase text-start">Bài viết nổi bật</div>
-                            <h4 class="font-roboto font-light text-md my-5 text-start">Các chủ đề ẩm thực <em class="text-red text-bold">HOT nhất</em> gần đây</h4>
+                            <div className="font-medium text-4xl my-6 uppercase text-center">Bài viết nổi bật</div>
+                            <h4 class="font-roboto font-light text-md my-5 text-center">Các chủ đề ẩm thực <em class="text-red text-bold">HOT nhất</em> gần đây</h4>
 
                             <ul className="text-black-800 flex">
                                 <li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10  " >Tất cả</li>
