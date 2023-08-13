@@ -28,6 +28,7 @@ const App = () => {
 							element={<DetailedTravelBlog />}
 						/>
 					</Route>
+<<<<<<< Updated upstream
 					<Route path="food" element={<FoodScreen />}></Route>
 					<Route path="culture" element={<CultureScreen />}/>
 					<Route
@@ -35,6 +36,18 @@ const App = () => {
 								element={<DetailedCultureBlog />}
 						/>
 				</Route>
+=======
+					<Route path="food" element={<FoodScreen />} />
+					<Route path="culture" element={<CultureScreen />}/>
+					<Route
+							path="/culture/view-blog/:blogId"
+							element={<DetailedCultureBlog />}
+					/>
+					<Route path="/search" element={<Search />} />
+					<Route path="/test" element={<Test />} />
+					<Route path="/login" element={<LoginScreen />} />
+					<Route path="/register" element={<Register />} />
+>>>>>>> Stashed changes
 
 				<Route path="/login" element={<LoginScreen />} />
 				<Route path="/register" element={<Register />} />
