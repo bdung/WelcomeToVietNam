@@ -5,7 +5,7 @@ const BannerSmallPost = ({postInfo}) => {
     return (
         <React.Fragment>
             <div className="max-w-[240px] mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl relative">
-                <div className="md:flex flex-col h-96" style={{ backgroundImage: `url(${postInfo.url})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="md:flex flex-col h-100" style={{ backgroundImage: `url(${postInfo.url})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className='m-2'>
                     <div className="p-3 bg-black bg-opacity-40 rounded-lg mt-56">
                         <div className="flex flex-row justify-between ">
