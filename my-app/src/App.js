@@ -1,47 +1,59 @@
 import React from "react";
 // some JSX here
 
-import Register from "./pages/Register";
-import LoginScreen from "./pages/Login";
 import { Outlet, Route, Routes } from "react-router-dom";
 import UserHomePage from "./user/UserHomePage";
 import TravelHomePage from "./user/Travel/TravelHomePage";
 import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
 import UserLayout from "./user/UserLayout";
 import FoodScreen from "./user/food/FoodPage";
-import DetailedFoodBlog from "./user/food/FoodDetailPage";
-import CultureScreen from "./user/culture/MainContent";
+import CultureScreen from "./user/culture/Culture";
+import DetailedCultureBlog from "./user/culture/details/DetailedCultureBlog";
 import AdminHomeScreen from "./admin/AdminHomePage";
+import AdminLayout from "./admin/adminLayout";
 import CreatePostScreen from "./admin/createdPost";
+import DashboardAdminScreen from "./admin/dashboard.admin";
 import Error from "./pages/Error";
-import Test from './user/Test.jsx';
+import LoginScreen from "./pages/Login";
+import Register from "./pages/Register";
+import Search from "./user/Search";
+import Test from "./user/Test.jsx";
 
+function Page(props) {
+	if (props === 1) return <UserHomePage />;
+	else return null;
+}
+function AdminPage(props) {
+	if (props === 1) return <AdminHomeScreen />;
+	else return <FoodScreen />;
+}
 const App = () => {
+	var props = 1;
 	return (
 		<div className="App">
 			<Routes>
 				<Route path="/" element={<UserLayout />}>
-					<Route index element={<UserHomePage />} />
-					<Route path="travel" element={<Outlet />}>
-						<Route index element={<TravelHomePage />} />
+					<Route path="" element={Page(props)} />
+					<Route path="travel" element={<TravelHomePage />}>
 						<Route
 							path="view-blog/:blogId"
 							element={<DetailedTravelBlog />}
 						/>
-						
 					</Route>
-					<Route path="food" element = {<FoodScreen/>}/>
-					<Route path="culture" element = {<CultureScreen/>}/>
+					<Route path="food" element={<FoodScreen />} />
+					<Route path="culture" element={<CultureScreen />} />
+					<Route path="/search" element={<Search />} />
+					<Route path="/test" element={<Test />} />
+					<Route path="/login" element={<LoginScreen />} />
+					<Route path="/register" element={<Register />} />
+
+					<Route path="/create-post" element={<CreatePostScreen />} />
+					<Route path="*" element={<Error />} />
 				</Route>
-				
-				<Route path="/test" element={<Test/>}/>
-				<Route path="/login" element={<LoginScreen />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/admin" element={<AdminHomeScreen />}>
-					
+				<Route path="/admin" element={<AdminLayout />}>
+					<Route path="" element={<DashboardAdminScreen />} />
+					<Route path="post" element={<AdminHomeScreen />} />
 				</Route>
-				<Route path="/create-post" element={<CreatePostScreen />} />
-				<Route path="*" element={<Error />} />
 			</Routes>
 		</div>
 	);
