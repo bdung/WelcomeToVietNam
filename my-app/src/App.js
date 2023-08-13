@@ -13,34 +13,29 @@ import CultureScreen from "./user/culture/MainContent";
 import AdminHomeScreen from "./admin/AdminHomePage";
 import CreatePostScreen from "./admin/createdPost";
 import Error from "./pages/Error";
+import Test from "./user/Test.jsx";
 
 const App = () => {
-	return (
-		<div className="App">
-			<Routes>
-				<Route path="/" element={<UserLayout />}>
-					<Route index element={<UserHomePage />} />
-					<Route path="travel" element={<Outlet />}>
-						<Route index element={<TravelHomePage />} />
-						<Route
-							path="view-blog/:blogId"
-							element={<DetailedTravelBlog />}
-						/>
-					</Route>
-					<Route path="food" element={<FoodScreen />}></Route>
-					<Route path="culture" element={<CultureScreen />}></Route>
-				</Route>
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<UserLayout />}>
+          <Route index element={<UserHomePage />} />
+          <Route path="travel" element={<Outlet />}>
+            <Route index element={<TravelHomePage />} />
+            <Route path="view-blog/:blogId" element={<DetailedTravelBlog />} />
+          </Route>
+          <Route path="food" element={<FoodScreen />} />
+          <Route path="culture" element={<CultureScreen />} />
+        </Route>
 
-				<Route path="/login" element={<LoginScreen />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/admin" element={<AdminHomeScreen />}>
-					
-				</Route>
-				<Route path="/create-post" element={<CreatePostScreen />} />
-				<Route path="*" element={<Error />} />
-			</Routes>
-		</div>
-	);
+        <Route path="/test" element={<Test />} />
+        <Route path="/login" element={<LoginScreen />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </div>
+  );
 };
 
 export default App;
