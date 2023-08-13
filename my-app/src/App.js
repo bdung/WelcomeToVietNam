@@ -7,6 +7,7 @@ import TravelHomePage from "./user/Travel/TravelHomePage";
 import DetailedTravelBlog from "./user/Travel/DetailedTravelBlog";
 import UserLayout from "./user/UserLayout";
 import FoodScreen from "./user/food/FoodPage";
+import DetailedFoodBlog from "./user/food/FoodDetailPage";
 import CultureScreen from "./user/culture/Culture";
 import DetailedCultureBlog from "./user/culture/details/DetailedCultureBlog";
 import AdminHomeScreen from "./admin/AdminHomePage";
