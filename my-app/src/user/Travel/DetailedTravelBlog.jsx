@@ -8,13 +8,7 @@ import HaLongImg from "../../assets/images/ha_long_bay.travel.jpg";
 import HoGuomImg from "../../assets/images/ho_guom.travel.jpg";
 import { FaAngleRight } from "react-icons/fa";
 import { BsBookmark } from "react-icons/bs";
-import {
-  FaHeart,
-  FaShare,
-  FaComment,
-  FaFacebook,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaHeart, FaComment } from "react-icons/fa";
 
 export default function DetailedTravelBlog() {
   const postsHighlight = [
@@ -59,7 +53,7 @@ export default function DetailedTravelBlog() {
           <BsBookmark class="text-4xl md:text-4xl lg:text-3xl text-white cursor-pointer" />
         </div>
         <div className=" absolute inset-0 flex flex-col text-white font-poppins  justify-center text-center  ">
-          <div className="font-bold text-3xl bg-black bg-opacity-20 rounded-lg pt-10  pl-10 pr-10 mr-60 mt-40 ml-60">
+          <div className="font-bold text-3xl bg-black bg-opacity-20 rounded-lg pt-10  pl-10 pr-10 mr-60 mt-20 ml-60">
             <div className="tracking-widest">
               Thiên đường bí ẩn trong lòng đất
             </div>

@@ -35,9 +35,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<UserLayout />}>
           <Route path="" element={Page(props)} />
-          <Route path="travel" element={<TravelHomePage />}>
-            <Route path="view-blog/:blogId" element={<DetailedTravelBlog />} />
-          </Route>
+          <Route path="travel" element={<TravelHomePage />}></Route>
+          <Route
+            path="/travel/view-blog/:blogId"
+            element={<DetailedTravelBlog />}
+          />
 
           <Route path="food" element={<FoodScreen />}></Route>
           <Route path="culture" element={<CultureScreen />} />
