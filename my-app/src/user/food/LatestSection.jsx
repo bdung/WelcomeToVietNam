@@ -13,6 +13,8 @@ const LatestSection = () => {
 
     const posts = [
         {
+            id: 1,
+            page: 'food',
             url: `url(${FOOD6})`,
             title: "Ảnh hưởng về văn hóa và yếu tố khí hậu, địa lý của từng vùng miền...",
             uploadTime: "03/04/2023",
@@ -21,6 +23,8 @@ const LatestSection = () => {
             comment: "2"
         },
         {
+            id: 2,
+            page: 'food',
             url: `url(${FOOD7})`,
             title: "Bí mật không thể bật mí của bánh mì vỉa hè??",
             uploadTime: "05/04/2023",
@@ -29,6 +33,8 @@ const LatestSection = () => {
             comment: "50"
         },
         {
+            id: 3,
+            page: 'food',
             url: `url(${FOOD1})`,
             title: `Văn hóa ẩm thực của Việt Nam đa dạng như thế nào?`,
             uploadTime: "03/04/2023",
@@ -37,6 +43,8 @@ const LatestSection = () => {
             comment: "24"
         },
         {
+            id: 4,
+            page: 'food',
             url: `url(${FOOD2})`,
             title: `Phở - Món ăn Việt nổi tiếng nhất và những câu chuyện về nó`,
             uploadTime: "03/04/2023",
@@ -45,6 +53,8 @@ const LatestSection = () => {
             comment: "13"
         },
         {
+            id: 5,
+            page: 'food',
             url: `url(${FOOD4})`,
             title: `Giá trị dinh dưỡng của hải sản và lí do bạn nên ăn `,
             uploadTime: "03/04/2023",
@@ -53,6 +63,8 @@ const LatestSection = () => {
             comment: "13"
         },
         {
+            id: 6,
+            page: 'food',
             url: `url(${FOOD3})`,
             title: `Top 10 món ăn không thể thiếu vào ngày Tết 2024`,
             uploadTime: "03/04/2023",
@@ -62,6 +74,8 @@ const LatestSection = () => {
         },
         
         {
+            id: 7,
+            page: 'food',
             url: `url(${FOOD4})`,
             title: `Top 10 món ăn không thể thiếu vào ngày Tết 2024`,
             uploadTime: "03/04/2023",
@@ -70,12 +84,14 @@ const LatestSection = () => {
             comment: "13"
         },
         {
-          url: `url(${FOOD6})`,
-          title: `Ảnh hưởng về văn hóa và yếu tố khí hậu, địa lý của từng vùng miền...`,
-          uploadTime: "03/04/2023",
-          timeForRead: "2 phút đọc",
-          like: "420",
-          comment: "13"
+            id: 8,
+            page: 'food',
+            url: `url(${FOOD6})`,
+            title: `Ảnh hưởng về văn hóa và yếu tố khí hậu, địa lý của từng vùng miền...`,
+            uploadTime: "03/04/2023",
+            timeForRead: "2 phút đọc",
+            like: "420",
+            comment: "13"
         },
         
     ];
@@ -97,8 +113,6 @@ const LatestSection = () => {
     //         }
     //     }
     // },[]);
-
-    
     
     return (
         <React.Fragment>

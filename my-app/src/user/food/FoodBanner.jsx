@@ -56,8 +56,8 @@ export default function FoodBanner() {
                             Ẩm thực
                         </h2>
 
-                        <h5 class="text-gray-100 italic pl-20 py-3 font-light text-sm font-poppins">
-                            Khám phá nét đẹp ẩm thực Việt Nam...
+                        <h5 class="text-gray-100 italic pl-10 py-3 font-light text-sm font-poppins">
+                            Khám phá nét đẹp trù phú, đa sắc của ẩm thực Việt Nam...
                         </h5>
 
                         {/* <input type="search" className="my-10 font-light text-sm font-poppins h-10 mx-auto" placeholder="Nhập tên bài post muốn tìm"/> */}

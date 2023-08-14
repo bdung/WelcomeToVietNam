@@ -1,12 +1,39 @@
 import React from "react";
-import FoodBanner from "./FoodBanner"
 import FoodDetailBody from "./FoodDetailBody"
+import { BsBookmark } from 'react-icons/bs'
 
-export default function LoginScreen() {
-	return (
+const THUMBNAIL = "https://www.agoda.com/wp-content/uploads/2020/05/Feature-photo-Pho-Ho-Chi-Minh-food-Vietnam.jpg"
+
+export default function FoodDetailPage() {
+    const thumbnailStyles = {
+        height: "100%",
+        position: "relative",
+    };
+
+    const thumbnailImageStyles = {
+        width: "100%",
+        height: "100%",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundImage: `url(${THUMBNAIL})`,
+    };
+
+    return (
         <React.Fragment>
-            <FoodBanner/>
-            <FoodDetailBody/>
+            <div className="z-1 max-w-full h-[39.5rem] w-full m-auto relative group">
+                <div style={thumbnailStyles} className="thumbnail">
+                    <div style={thumbnailImageStyles} className="thumbnail-image brightness-50">
+                        {/* <img src={THUMBNAIL} alt="This is a magnificent thumbnail"></img> */}
+                    </div>
+                    <div class="z-10 absolute right-5 bottom-5">
+                        <BsBookmark class="text-5xl md:text-5xl lg:text-6xl text-white cursor-pointer" />
+                    </div>
+                    <div className="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+            text-5xl md:text-5xl lg:text-6xl text-bold text-white
+            drop-shadow be-viet-nam-pro-regular">Ẩm thực Việt Nam đa dạng như thế nào?</div>
+                </div>
+            </div>
+            <FoodDetailBody />
         </React.Fragment>
-	);
+    );
 }
