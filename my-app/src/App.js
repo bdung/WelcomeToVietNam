@@ -21,49 +21,56 @@ import Search from "./user/Search";
 import Test from "./user/Test.jsx";
 
 function Page(props) {
-  if (props === 1) return <UserHomePage />;
-  else return null;
+	if (props === 1) return <UserHomePage />;
+	else return null;
 }
 function AdminPage(props) {
-  if (props === 1) return <AdminHomeScreen />;
-  else return <FoodScreen />;
+	if (props === 1) return <AdminHomeScreen />;
+	else return <FoodScreen />;
 }
 const App = () => {
-  var props = 1;
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<UserLayout />}>
-          <Route path="" element={Page(props)} />
-          <Route path="travel" element={<TravelHomePage />}></Route>
+	var props = 1;
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<UserLayout />}>
+					<Route path="" element={Page(props)} />
+					<Route path="travel" element={<TravelHomePage />}>
           <Route
-            path="/travel/view-blog/:blogId"
-            element={<DetailedTravelBlog />}
-          />
+						path="detail/:blogId"
+						element={<DetailedTravelBlog />}
+					/>
+          </Route>
+					
 
-          <Route path="food" element={<FoodScreen />}></Route>
-          <Route path="culture" element={<CultureScreen />} />
-          <Route
-            path="/culture/view-blog/:blogId"
-            element={<DetailedCultureBlog />}
-          />
-        </Route>
+					<Route path="food" element={<FoodScreen />}>
+						<Route
+							path="detail/:blogId"
+							element={<DetailedFoodBlog />}
+						/>
+					</Route>
+					<Route path="culture" element={<CultureScreen />} />
+					<Route
+						path="detail/:blogId"
+						element={<DetailedCultureBlog />}
+					/>
+				</Route>
 
-        <Route path="/search" element={<Search />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/login" element={<LoginScreen />} />
-        <Route path="/register" element={<Register />} />
+				<Route path="/search" element={<Search />} />
+				<Route path="/test" element={<Test />} />
+				<Route path="/login" element={<LoginScreen />} />
+				<Route path="/register" element={<Register />} />
 
-        <Route path="/create-post" element={<CreatePostScreen />} />
-        <Route path="*" element={<Error />} />
+				<Route path="/create-post" element={<CreatePostScreen />} />
+				<Route path="*" element={<Error />} />
 
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route path="" element={<DashboardAdminScreen />} />
-          <Route path="post" element={<AdminHomeScreen />} />
-        </Route>
-      </Routes>
-    </div>
-  );
+				<Route path="/admin" element={<AdminLayout />}>
+					<Route path="" element={<DashboardAdminScreen />} />
+					<Route path="post" element={<AdminHomeScreen />} />
+				</Route>
+			</Routes>
+		</div>
+	);
 };
 
 export default App;

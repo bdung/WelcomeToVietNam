@@ -1,9 +1,11 @@
 import React from "react";
 import { FaArrowRight, FaHeart, FaComment } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BannerSmallPost = ({ postInfo }) => {
   return (
     <React.Fragment>
+      <Link to = {`/${postInfo.page}/detail/${postInfo.id}`}>
       <div className="max-w-[240px] mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl relative">
         <div
           className="md:flex flex-col h-100"
@@ -51,6 +53,8 @@ const BannerSmallPost = ({ postInfo }) => {
           </div>
         </div>
       </div>
+      </Link>
+    
     </React.Fragment>
   );
 };

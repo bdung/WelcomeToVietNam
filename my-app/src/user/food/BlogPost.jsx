@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const BlogPost = ({ postInfo }) => {
 	return (
 		<React.Fragment>
-			<Link to={`/${postInfo.page}/view-blog/${postInfo.id}`}>
+			<Link to={`/${postInfo.page}/detail/${postInfo.id}`}>
 				<div className="max-w-[240px] mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl relative">
 					<div className="md:flex flex-col">
 						<div className="md:shrink-0 ">
