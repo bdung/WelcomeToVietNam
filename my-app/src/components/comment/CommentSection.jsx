@@ -16,6 +16,8 @@ const CommentSection = () => {
 
     ];
 
+    const userId = "a";
+
     return (
         <React.Fragment>
 
@@ -23,7 +25,7 @@ const CommentSection = () => {
                 24 bình luận
             </div>
             <div className="flex items-center max-w-screen-lg mx-auto relative my-5">
-                <CommentContainer/>
+                <CommentContainer logginedUserId={userId}/>
             </div>
             {/* comments */}
 
