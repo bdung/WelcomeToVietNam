@@ -100,10 +100,10 @@ function ThemeMenu() {
 export default function AdminHomePage() {
 	const [showModel, setShowModal] = React.useState(false);
 	return (
-		<div className="m-5 shadow sm:shadow md:shadow lg:shadow xl:shadow">
-			<h2 className="text-center pb-5">Tạo bài</h2>
-			<div className="text-start m-5 ">
-				<div class="mb-6">
+		<div className="grid items-center justify-items-center">
+			<h2 className="text-center mt-5 pb-5">Tạo bài</h2>
+			<div className="text-start m-5 w-1/2 shadow sm:shadow md:shadow lg:shadow xl:shadow ">
+				<div class="flex m-5 justify-between ">
 					<label
 						for="default-input"
 						class="block mb-2 text-sm font-medium text-gray-900 "
@@ -113,10 +113,10 @@ export default function AdminHomePage() {
 					<input
 						type="text"
 						id="default-input"
-						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+						class="w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 "
 					/>
 				</div>
-				<div>
+				<div className="flex m-5 justify-between">
 					<label
 						class="block mb-2 mt-5 text-sm font-medium text-gray-900 "
 						for="file_input"
@@ -124,99 +124,96 @@ export default function AdminHomePage() {
 						Chọn ảnh tiêu đề
 					</label>
 					<input
-						class="font-poppins block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
+						class=" w-1/2 font-poppins block  text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
 						aria-describedby="file_input_help"
 						id="file_input"
 						type="file"
 					/>
-					<p
-						class="mt-1 text-sm text-gray-500 dark:text-gray-300"
-						id="file_input_help"
-					>
-						SVG, PNG, JPG or GIF (MAX. 800x400px).
-					</p>
 				</div>
-				<h3 class="block mb-2 mt-5 text-sm font-medium text-gray-900 ">
-					Chọn chủ đề
-				</h3>
-				<ul class="w-48 text-sm font-medium text-gray-900 bg-white ">
-					<li class="w-full ">
-						<div class="flex items-center pl-3">
-							<input
-								id="list-radio-license"
-								type="radio"
-								value=""
-								name="list-radio"
-								class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-							/>
-							<label
-								for="list-radio-license"
-								class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-							>
-								Du lịch{" "}
-							</label>
-						</div>
-					</li>
-					<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-						<div class="flex items-center pl-3">
-							<input
-								id="list-radio-id"
-								type="radio"
-								value=""
-								name="list-radio"
-								class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-							/>
-							<label
-								for="list-radio-id"
-								class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-							>
-								Ẩm thực
-							</label>
-						</div>
-					</li>
-					<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-						<div class="flex items-center pl-3">
-							<input
-								id="list-radio-millitary"
-								type="radio"
-								value=""
-								name="list-radio"
-								class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-							/>
-							<label
-								for="list-radio-millitary"
-								class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-							>
-								Văn hóa
-							</label>
-						</div>
-					</li>
-					<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-						<div class="flex items-center pl-3">
-							<input
-								id="list-radio-passport"
-								type="radio"
-								value=""
-								name="list-radio"
-								class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-							/>
-							<label
-								for="list-radio-passport"
-								class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-							>
-								Khác
-							</label>
-						</div>
-					</li>
-				</ul>
+				<div className="flex m-5 justify-between ">
+					<h3 class="block mb-2 text-sm font-medium text-gray-900 ">
+						Chọn chủ đề
+					</h3>
+					<ul class="w-1/2 text-sm font-medium text-gray-900 bg-white ">
+						<li class="w-full ">
+							<div class="flex items-center pl-3">
+								<input
+									id="list-radio-license"
+									type="radio"
+									value=""
+									name="list-radio"
+									class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 "
+								/>
+								<label
+									for="list-radio-license"
+									class="w-full py-3 ml-2 text-sm font-small text-gray-900 "
+								>
+									Du lịch
+								</label>
+							</div>
+						</li>
+						<li class="w-full ">
+							<div class="flex items-center pl-3">
+								<input
+									id="list-radio-id"
+									type="radio"
+									value=""
+									name="list-radio"
+									class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+								/>
+								<label
+									for="list-radio-id"
+									class="w-full py-3 ml-2 text-sm font-small text-gray-900"
+								>
+									Ẩm thực
+								</label>
+							</div>
+						</li>
+						<li class="w-full ">
+							<div class="flex items-center pl-3">
+								<input
+									id="list-radio-millitary"
+									type="radio"
+									value=""
+									name="list-radio"
+									class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+								/>
+								<label
+									for="list-radio-millitary"
+									class="w-full py-3 ml-2 text-sm font-small text-gray-900"
+								>
+									Văn hóa
+								</label>
+							</div>
+						</li>
+						<li class="w-full ">
+							<div class="flex items-center pl-3">
+								<input
+									id="list-radio-passport"
+									type="radio"
+									value=""
+									name="list-radio"
+									class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+								/>
+								<label
+									for="list-radio-passport"
+									class="w-full py-3 ml-2 text-sm font-small text-gray-900 "
+								>
+									Khác
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
 
-				<label class="block mb-2 mt-5 text-sm font-medium text-gray-900 ">
+				<label class="block m-5 text-sm font-medium text-gray-900 ">
 					Mô tả
 				</label>
+				<div className="m-5">
+					<TextEditor initialValue="" getValue={"value"} />
+				</div>
 
-				<TextEditor initialValue="" getValue={"value"} />
-
-				<div className="flex items-center mt-5">
+				<div className="flex items-center m-5">
 					<div className="block mb-2 text-sm font-medium text-gray-900 ">
 						Xem trước
 					</div>

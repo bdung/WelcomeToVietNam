@@ -10,7 +10,7 @@ const RichTextEditor = ({ initialValue, getValue }) => {
 	return (
 		<CKEditor
 			editor={ClassicEditor}
-			data="<p>Hello from CKEditor&nbsp;5!</p>"
+			data="<p>Nhập nội dung bài viết</p>"
 			onReady={(editor) => {
 				// You can store the "editor" and use when it is needed.
 				console.log("Editor is ready to use!", editor);
