@@ -4,23 +4,26 @@ import { FaFacebookF, FaGoogle } from "react-icons/fa";
 
 export default function RegisterScreen() {
 	return (
-		<section class="bg-gray-50 min-h-screen flex items-center">
-			<div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-gray-100 required  rounded-2x1 shadow-lg max-w-3x1 container mx-auto sm:rounded-lg">
+		<section class="bg-gray-50 min-h-screen flex items-center ">
+			<div className="flex flex-col  lg:flex-row w-6/12 lg:w-6/12 bg-gray-100 required  rounded-2x1 shadow-lg max-w-3x1 container mx-auto sm:rounded-lg">
 				<div
 					className=" flex flex-col w-full lg:w-1/2 h-auto
-			items-center rounded-tr-md rounded-br-md"
+			items-center rounded-tl-md rounded-bl-md"
 					style={{ backgroundImage: `url(${IMAGE_COVER})` }}
 				>
 					<p className="h-16"></p>
-					<button
-						type="submit"
-						className="w-1/2 flex justify-center my-auto py-2 px-4 border 
-								border-transparent rounded-md shadow-sm text-sm font-medium
-								 text-white bg-cyan-600
-								  hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 "
+					<a
+						href="/login"
+						className="border 
+            border-transparent shadow-sm font-medium
+     bg-cyan-600
+              hover:bg-cyan-500 border-gray-300 rounded-md p-3 mx-1
+								hover:border-cyan-500  w-1/2 flex justify-center my-auto py-2 px-4 
+								text-sm text-white
+								"
 					>
-						Đăng ký
-					</button>
+						Đăng nhập
+					</a>
 					<p className="h-16"></p>
 				</div>
 				<div className="w-full lg:w-1/2 sm:mx-auto ssm:mx-auto ssm:max-w-xs ">
@@ -65,8 +68,7 @@ export default function RegisterScreen() {
 									/>
 								</div>
 							</div>
-
-							<div className="flex items-center justify-between ssm:flex-col">
+							<div className="flex items-center justify-between ssm:flex-col invisible">
 								<div className="flex items-center">
 									<input
 										id="remember-me"
@@ -91,7 +93,6 @@ export default function RegisterScreen() {
 									</a>
 								</div>
 							</div>
-
 							<div className="flex justify-center my-2">
 								<button
 									type="submit"
@@ -100,15 +101,16 @@ export default function RegisterScreen() {
 									 text-white bg-cyan-600
 									  hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 "
 								>
-									Đăng nhập
+									Đăng ký
 								</button>
 							</div>
-							<p className="text-black flex justify-center my-2">
+
+							<p className="text-black flex justify-center my-2 invisible">
 								Hoặc
 							</p>
-							<div className="flex justify-center my-2">
+							<div className="flex justify-center invisible ">
 								<a
-									href="#"
+									href="https://facebook.com"
 									className="border-2 border-gray-300 rounded-full p-3 mx-1
 								hover:border-cyan-500 focus:outline-none 
 								"
@@ -116,7 +118,7 @@ export default function RegisterScreen() {
 									<FaFacebookF className="text-sm text-cyan-600 " />
 								</a>
 								<a
-									href="#"
+									href="https://google.com"
 									className="border-2 border-gray-300 rounded-full p-3 mx-1
 								hover:border-cyan-500 focus:outline-none 
 								"

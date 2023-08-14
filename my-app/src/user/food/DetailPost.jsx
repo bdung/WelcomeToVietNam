@@ -1,9 +1,9 @@
 import React from "react";
 import { FaHeart, FaShare } from 'react-icons/fa'
 import { BsBookmark } from 'react-icons/bs'
-import FOOD1 from "./food1.jpg";
-import FOOD2 from "./food2.jpg";
-import FOOD3 from "./food3.jpg";
+import FOOD1 from "../../assets/images/food1.jpg";
+import FOOD2 from "../../assets/images/food2.jpg";
+import FOOD3 from "../../assets/images/food3.jpg";
 import CommentSection from "./CommentSection";
 
 export default function FoodBody() {
@@ -20,7 +20,7 @@ export default function FoodBody() {
                     </div>
 
                     <div id="top" class="columns-2">
-                        <div id="interactive-menu" class="px-10">
+                        <div id="interactive-menu" class="px-10 columns-1">
                             <p class="my-3 font-roboto font-light">
                                 <FaHeart class="text-sm text-red-700" />
                                 110
@@ -33,7 +33,7 @@ export default function FoodBody() {
 
                         </div>
 
-                        <div id="general-info" class="text-end px-10">
+                        <div id="general-info" class="text-end px-10 columns-1">
                             <p class="my-5 font-roboto font-light italic">
                                 Ngày đăng 03/04/2023
                             </p>
@@ -81,18 +81,18 @@ export default function FoodBody() {
                         </div>
                     </div>
 
-                    <div class="flex flex-col divide-y-8 divide-double divide-yellow-500">
+                    {/* <div class="flex flex-col divide-y-8 divide-dotted divide-yellow-500">
                         <h1 /><h1 />
-                    </div>
-                    <div class="flex flex-col divide-y-8 divide-double divide-yellow-200">
+                    </div> */}
+                    <div class="flex flex-col divide-y-8 divide-dotted divide-yellow-200">
                         <h1 /><h1 />
                     </div>
 
-                    <div id="comment" class="">
-                        <p class="italic text-blue-400 px-10 py-3 font-roboto">
+                    <div id="comment" class="px-10 py-3">
+                        <p class="italic text-blue-400  font-roboto">
                             24 bình luận
-                            <CommentSection/>
                         </p>
+                        <CommentSection/>
                     </div>
 
                 </div>

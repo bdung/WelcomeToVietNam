@@ -1,10 +1,10 @@
 import React from 'react';
 import BlogPost from './BlogPost';
 import { FaAngleRight } from "react-icons/fa";
-import FOOD1 from "./food1.jpg";
-import FOOD4 from "./food4.png";
-import FOOD5 from "./food5.jpg";
-import FOOD6 from "./food6.jpg";
+import FOOD1 from "../../assets/images/food1.jpg";
+import FOOD4 from "../../assets/images/food4.png";
+import FOOD5 from "../../assets/images/food5.jpg";
+import FOOD6 from "../../assets/images/food6.jpg";
 
 const HighlightedSection = () => {
     const posts = [
@@ -39,7 +39,7 @@ const HighlightedSection = () => {
           timeForRead: "2 phút đọc",
           like: "420",
           comment: "13"
-      },
+        },
 
       ];
     
@@ -53,7 +53,7 @@ const HighlightedSection = () => {
                         <BlogPost postInfo={post} key={postIndex}/>)) 
                     }
                 </div>
-                <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-4xl text-[#1AA1D5] cursor-pointer">
+                <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-1 text-4xl text-[#1AA1D5] cursor-pointer">
                     <FaAngleRight/>
                 </div>
 

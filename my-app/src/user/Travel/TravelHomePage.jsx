@@ -8,7 +8,7 @@ import HoiAnImg from "../../assets/images/hoi_an.travel.jpg";
 import NhaTrangImg from "../../assets/images/nha_trang.travel.jpg";
 import HaLongImg from "../../assets/images/ha_long_bay.travel.jpg";
 import HoGuomImg from "../../assets/images/ho_guom.travel.jpg";
-import Coverflow from "react-coverflow";
+// import Coverflow from "react-coverflow";
 import BannerSmallPost from "../../components/BannerSmallPost";
 
 export default function TravelHomePage() {
@@ -191,7 +191,7 @@ export default function TravelHomePage() {
             />
           </div>
         </div>
-
+        {/* 
         <div className="absolute top-0 right-0 w-1/2 h-1/2 flex flex-col justify-between mt-10">
           <Coverflow
             displayQuantityOfSide={2}
@@ -215,7 +215,7 @@ export default function TravelHomePage() {
               </div>
             ))}
           </Coverflow>
-        </div>
+        // </div> */}
       </div>
 
       <div className="pl-10 ">
@@ -241,7 +241,7 @@ export default function TravelHomePage() {
           </li>
           <div className="ml-auto">
             <span className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10">
-              Xem tất cả >
+              Xem tất cả
             </span>
           </div>
         </ul>
