@@ -2,7 +2,7 @@ import {
 	InboxArrowDownIcon,
 	LifebuoyIcon,
 	PowerIcon,
-	UserCircleIcon
+	UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import {
 	Button,
@@ -10,28 +10,33 @@ import {
 	MenuHandler,
 	MenuItem,
 	MenuList,
-	Typography
+	Typography,
 } from "@material-tailwind/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 // profile menu component
 const profileMenuItems = [
 	{
 		label: "Trang cá nhân",
 		icon: UserCircleIcon,
+		link: "/",
 	},
 
 	{
 		label: "Tin nhắn",
 		icon: InboxArrowDownIcon,
+		link: "/",
 	},
 	{
 		label: "Giúp đỡ",
 		icon: LifebuoyIcon,
+		link: "/",
 	},
 	{
 		label: "Đăng xuất",
 		icon: PowerIcon,
+		link: "/login",
 	},
 ];
 
@@ -39,6 +44,9 @@ function ProfileMenu() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
 	const closeMenu = () => setIsMenuOpen(false);
+	function isLogout() {
+		return <a href="/login"></a>;
+	}
 
 	return (
 		<Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
@@ -56,12 +64,13 @@ function ProfileMenu() {
 				</Button>
 			</MenuHandler>
 			<MenuList className="p-1 z-30">
-				{profileMenuItems.map(({ label, icon }, key) => {
+				{profileMenuItems.map(({ label, icon, link }, key) => {
 					const isLastItem = key === profileMenuItems.length - 1;
+
 					return (
-						<MenuItem
+						<Link
+							to={link}
 							key={label}
-							onClick={closeMenu}
 							className={`flex items-center gap-2 rounded ${
 								isLastItem
 									? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
@@ -82,7 +91,7 @@ function ProfileMenu() {
 							>
 								{label}
 							</Typography>
-						</MenuItem>
+						</Link>
 					);
 				})}
 			</MenuList>

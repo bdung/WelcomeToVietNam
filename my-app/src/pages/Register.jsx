@@ -1,5 +1,6 @@
 import React from "react";
 import IMAGE_COVER from "../assets/images/image_cover.jpg";
+import { FaFacebookF, FaGoogle } from "react-icons/fa";
 
 export default function RegisterScreen() {
 	return (
@@ -11,15 +12,18 @@ export default function RegisterScreen() {
 					style={{ backgroundImage: `url(${IMAGE_COVER})` }}
 				>
 					<p className="h-16"></p>
-					<button
-						type="submit"
-						className="w-1/2 flex justify-center my-auto py-2 px-4 border 
-								border-transparent rounded-md shadow-sm text-sm font-medium
-								 text-white bg-cyan-600
-								  hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 "
+					<a
+						href="/login"
+						className="border 
+            border-transparent shadow-sm font-medium
+     bg-cyan-600
+              hover:bg-cyan-500 border-gray-300 rounded-md p-3 mx-1
+								hover:border-cyan-500  w-1/2 flex justify-center my-auto py-2 px-4 
+								text-sm text-white
+								"
 					>
 						Đăng nhập
-					</button>
+					</a>
 					<p className="h-16"></p>
 				</div>
 				<div className="w-full lg:w-1/2 sm:mx-auto ssm:mx-auto ssm:max-w-xs ">
@@ -64,7 +68,31 @@ export default function RegisterScreen() {
 									/>
 								</div>
 							</div>
+							<div className="flex items-center justify-between ssm:flex-col invisible">
+								<div className="flex items-center">
+									<input
+										id="remember-me"
+										name="remember-me"
+										type="checkbox"
+										className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+									/>
+									<label
+										htmlFor="remember-me"
+										className="ml-2 block text-sm text-gray-900"
+									>
+										Lưu đăng nhập
+									</label>
+								</div>
 
+								<div className="text-sm">
+									<a
+										href="/"
+										className="font-medium text-indigo-600 hover:text-indigo-500"
+									>
+										Quên mật khẩu?
+									</a>
+								</div>
+							</div>
 							<div className="flex justify-center my-2">
 								<button
 									type="submit"
@@ -75,6 +103,28 @@ export default function RegisterScreen() {
 								>
 									Đăng ký
 								</button>
+							</div>
+
+							<p className="text-black flex justify-center my-2 invisible">
+								Hoặc
+							</p>
+							<div className="flex justify-center invisible ">
+								<a
+									href="https://facebook.com"
+									className="border-2 border-gray-300 rounded-full p-3 mx-1
+								hover:border-cyan-500 focus:outline-none 
+								"
+								>
+									<FaFacebookF className="text-sm text-cyan-600 " />
+								</a>
+								<a
+									href="https://google.com"
+									className="border-2 border-gray-300 rounded-full p-3 mx-1
+								hover:border-cyan-500 focus:outline-none 
+								"
+								>
+									<FaGoogle className="text-sm text-cyan-600" />
+								</a>
 							</div>
 						</form>
 					</div>

@@ -2,11 +2,10 @@ import React from "react";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import IMAGE_COVER from "../assets/images/image_cover_login.jpg";
 
-
 export default function LoginScreen() {
 	return (
 		<div class=" bg-gray-50 min-h-screen flex items-center  ">
-			<div className="flex flex-col lg:flex-row w-8/12 lg:w-8/12 bg-gray-100 required  rounded-2x1 shadow-lg max-w-3x1 container mx-auto sm:rounded-lg">
+			<div className="flex flex-col lg:flex-row w-6/12 lg:w-6/12 bg-gray-100 required  rounded-2x1 shadow-lg max-w-3x1 container mx-auto sm:rounded-lg">
 				<div className="w-full lg:w-1/2 sm:mx-auto ssm:mx-auto ssm:max-w-xs ">
 					<div className="flex flex-col w-full bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 ssm:max-w-xs ssm:px-6 ssm:rounded-lg">
 						<form className="space-y-6" action="#" method="POST">
@@ -124,7 +123,7 @@ export default function LoginScreen() {
             border-transparent shadow-sm font-medium
      bg-cyan-600
               hover:bg-cyan-500 border-gray-300 rounded-md p-3 mx-1
-								hover:border-cyan-500 focus:outline-none w-1/2 flex justify-center my-auto py-2 px-4 
+								hover:border-cyan-500  w-1/2 flex justify-center my-auto py-2 px-4 
 								text-sm text-white
 								"
 					>
