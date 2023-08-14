@@ -185,15 +185,15 @@ export default function TravelHomePage() {
 						<div>Đến với thiên đường du lịch</div>
 					</div>
 					<div className="flex font-light text-sm font-poppins ml-9 p-5 text-center">
-						<div className="">
-							<div>
-								Bạn chẳng cần đi du lịch đâu xa cho tốn kém, bạn
-								chỉ cần đi hết đất nước Việt Nam
-							</div>
+						{/* <div className=""> */}
+						<div>
+							Bạn chẳng cần đi du lịch đâu xa cho tốn kém, bạn chỉ
+							cần đi hết đất nước Việt Nam
 						</div>
+						{/* </div> */}
 					</div>
-					<div className="flex inset-x-0 ">
-						<span class="absolute inset-y-0 left-0 flex items-center pl-10">
+					<div className=" pl-10 relative inset-x-0 bottom-0 mt-10 mb-20">
+						<span class="absolute inset-y-0 left-10 flex items-center pl-2">
 							<button
 								type="submit"
 								class="p-1 focus:outline-none focus:shadow-outline"
@@ -206,7 +206,7 @@ export default function TravelHomePage() {
 									stroke-width="2"
 									viewBox="0 0 24 24"
 									class="w-6 h-6"
-									color="white"
+									color="#1AA1D5"
 								>
 									<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
 								</svg>
@@ -215,7 +215,7 @@ export default function TravelHomePage() {
 						<input
 							type="search"
 							name="q"
-							class="py-2 text-sm text-white bg-gray-900 pl-10 focus:outline-none focus:bg-white focus:text-gray-900 w-80 p-2 rounded-full border-2 focus:outline-none focus:ring focus:border-blue-300"
+							class="py-2 text-sm bg-gray-100 pl-10 focus:bg-white focus:text-gray-900 w-80 p-2 rounded-full focus:outline-none focus:ring focus:border-blue-300"
 							placeholder="Tìm kiếm bài viết..."
 							autocomplete="off"
 						/>

@@ -46,20 +46,18 @@ const App = () => {
 						element={<DetailedFoodBlog />}
 					/>
 					<Route path="culture" element={<CultureScreen />} />
-          <Route
-					path="culture/detail/:blogId"
-					element={<DetailedCultureBlog />}
-				/>
+					<Route
+						path="culture/detail/:blogId"
+						element={<DetailedCultureBlog />}
+					/>
+					<Route path="/search" element={<Search />} />
+					<Route path="/test" element={<Test />} />
+					<Route path="/login" element={<LoginScreen />} />
+					<Route path="/register" element={<Register />} />
+
+					<Route path="/create-post" element={<CreatePostScreen />} />
+					<Route path="*" element={<Error />} />
 				</Route>
-				
-
-				<Route path="/search" element={<Search />} />
-				<Route path="/test" element={<Test />} />
-				<Route path="/login" element={<LoginScreen />} />
-				<Route path="/register" element={<Register />} />
-
-				<Route path="/create-post" element={<CreatePostScreen />} />
-				<Route path="*" element={<Error />} />
 
 				<Route path="/admin" element={<AdminLayout />}>
 					<Route path="" element={<DashboardAdminScreen />} />

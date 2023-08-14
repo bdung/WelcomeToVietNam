@@ -171,22 +171,22 @@ export default function UserHomePage() {
 						<SmallPost postInfo={post} key={postIndex} />
 					))}
 				</div>
-				<div className="text-black  ">
+				<a className="text-black  " href="/travel">
 					<div className="font-bold text-6xl mb-6">DU LỊCH</div>
 					<div className="font-lg  text-lg w-80 ">
 						Bao gồm các bài viết về các địa điểm du lịch và những
 						trải nghiệm ở đó.
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<div className="flex justify-around items-center font-poppins  ">
-				<div className="text-black  ">
+				<a href="/food" className="text-black  ">
 					<div className="font-bold text-6xl mb-6">ẨM THỰC</div>
 					<div className=" font-base font-medium text-lg w-80 ">
 						Những món ăn ngon đặc trưng cho các vùng miền.
 					</div>
-				</div>
+				</a>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-7/12 pt-24  ">
 					{postsFood.map((post, postIndex) => (
 						<SmallPost postInfo={post} key={postIndex} />
@@ -200,13 +200,13 @@ export default function UserHomePage() {
 						<SmallPost postInfo={post} key={postIndex} />
 					))}
 				</div>
-				<div className="text-black font-poppins ">
+				<a href="/culture" className="text-black font-poppins ">
 					<div className="font-bold text-6xl mb-6">VĂN HÓA</div>
 					<div className="font-medium font-base  text-lg w-80 ">
 						Bao gồm các bài viết về văn hóa đặc sắc mang đậm bản sắc
 						dân tộc của Việt Nam.
 					</div>
-				</div>
+				</a>
 			</div>
 			<div className="pl-20">
 				<div className="font-medium text-4xl mb-6">

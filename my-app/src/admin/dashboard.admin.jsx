@@ -84,73 +84,6 @@ export default function DashboardAdmin() {
 			comment: "13",
 			topic: "Du lịch",
 		},
-		{
-			id: "3",
-
-			url: "http://localhost:3000/assets/culture_blog_03.jpg",
-			title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-			uploadTime: "03/04/2023",
-			timeForRead: "2 phút đọc",
-			like: "420",
-			comment: "13",
-			topic: "Du lịch",
-		},
-		{
-			id: "3",
-
-			url: "http://localhost:3000/assets/culture_blog_03.jpg",
-			title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-			uploadTime: "03/04/2023",
-			timeForRead: "2 phút đọc",
-			like: "420",
-			comment: "13",
-			topic: "Du lịch",
-		},
-		{
-			id: "3",
-
-			url: "http://localhost:3000/assets/culture_blog_03.jpg",
-			title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-			uploadTime: "03/04/2023",
-			timeForRead: "2 phút đọc",
-			like: "420",
-			comment: "13",
-			topic: "Du lịch",
-		},
-		{
-			id: "3",
-
-			url: "http://localhost:3000/assets/culture_blog_03.jpg",
-			title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-			uploadTime: "03/04/2023",
-			timeForRead: "2 phút đọc",
-			like: "420",
-			comment: "13",
-			topic: "Du lịch",
-		},
-		{
-			id: "3",
-
-			url: "http://localhost:3000/assets/culture_blog_03.jpg",
-			title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-			uploadTime: "03/04/2023",
-			timeForRead: "2 phút đọc",
-			like: "420",
-			comment: "13",
-			topic: "Du lịch",
-		},
-		{
-			id: "3",
-
-			url: "http://localhost:3000/assets/culture_blog_03.jpg",
-			title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-			uploadTime: "03/04/2023",
-			timeForRead: "2 phút đọc",
-			like: "420",
-			comment: "13",
-			topic: "Du lịch",
-		},
-		
 	];
 	const arrayDataItems = posts.map((item) => (
 		<Table.Row className="bg-white text-start" key={item.id}>
@@ -176,11 +109,11 @@ export default function DashboardAdmin() {
 	const [showModel, setShowModal] = React.useState(false);
 	return (
 		<div>
-			<div className="m-5 shadow sm:shadow md:shadow lg:shadow xl:shadow">
+			{/* <div className="m-5 shadow sm:shadow md:shadow lg:shadow xl:shadow">
 				Dashboard1
-			</div>
+			</div> */}
 			<div className="m-5 shadow sm:shadow md:shadow lg:shadow xl:shadow text-start text-black">
-				<h2>Danh sách bài đăng</h2>
+				<h2 className="mb-5">Danh sách bài đăng</h2>
 				<Table>
 					<Table.Head className="text-start">
 						<Table.HeadCell className="p-4">
