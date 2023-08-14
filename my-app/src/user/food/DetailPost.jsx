@@ -19,10 +19,10 @@ export default function FoodBody() {
                         <h1 class="font-roboto font-semibold text-2xl">Văn hóa ẩm thực của Việt Nam đa dạng như thế nào?</h1>
                     </div>
 
-                    <div id="top" class="columns-2">
-                        <div id="interactive-menu" class="px-10 columns-1">
-                            <p class="my-3 font-roboto font-light">
-                                <FaHeart class="text-sm text-red-700" />
+                    <div id="top" className="columns-2">
+                        <div id="interactive-menu" className="px-10 columns-1">
+                            <p className="my-3 font-roboto font-light">
+                                <FaHeart className="text-sm text-red-700" />
                                 110
                             </p>
 

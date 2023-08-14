@@ -35,26 +35,23 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<UserLayout />}>
 					<Route path="" element={Page(props)} />
-					<Route path="travel" element={<TravelHomePage />}>
-          <Route
-						path="detail/:blogId"
+					<Route path="travel" element={<TravelHomePage />}></Route>
+					<Route
+						path="travel/detail/:blogId"
 						element={<DetailedTravelBlog />}
 					/>
-          </Route>
-					
-
-					<Route path="food" element={<FoodScreen />}>
-						<Route
-							path="detail/:blogId"
-							element={<DetailedFoodBlog />}
-						/>
-					</Route>
-					<Route path="culture" element={<CultureScreen />} />
+					<Route path="food" element={<FoodScreen />}></Route>
 					<Route
-						path="detail/:blogId"
-						element={<DetailedCultureBlog />}
+						path="food/detail/:blogId"
+						element={<DetailedFoodBlog />}
 					/>
+					<Route path="culture" element={<CultureScreen />} />
+          <Route
+					path="culture/detail/:blogId"
+					element={<DetailedCultureBlog />}
+				/>
 				</Route>
+				
 
 				<Route path="/search" element={<Search />} />
 				<Route path="/test" element={<Test />} />

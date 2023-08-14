@@ -22,7 +22,7 @@ const CommentForm = ({ btnLabel, formSubmitHandler }) => {
                         <textarea id="freeform" name="freeform"
                             rows="3" cols="200" wrap="soft"
                             placeholder='Hãy chia sẻ cảm nghĩ của bạn...'
-                            className='w-full focus:outline-none mx-auto'
+                            className='w-full focus:outline-none mx-auto pl-3 rounded-xl pt-3'
                             value={value}
                             onChange={(e) => setValue(e.target.value)}
                         />

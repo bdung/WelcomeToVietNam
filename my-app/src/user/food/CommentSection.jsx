@@ -48,7 +48,7 @@ const CommentSection = () => {
                     style={{ backgroundImage: `url(${AVATAR})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
                 />
 
-                <textarea id="freeform" name="freeform" rows="2" cols="200" wrap="soft" placeholder='Hãy chia sẻ cảm nghĩ của bạn...' className='mr-20' />
+                <textarea id="freeform" name="freeform" rows="2" cols="200" wrap="soft" placeholder='Hãy chia sẻ cảm nghĩ của bạn...' className='mr-20 pl-3 pt-3 rounded-xl' />
                 <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-4xl text-[#1AA1D5] cursor-pointer">
                     <IoMdSend />
                 </div>
