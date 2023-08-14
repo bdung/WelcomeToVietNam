@@ -1,5 +1,5 @@
-import React from "react";
-import { FaArrowRight, FaHeart, FaComment } from "react-icons/fa";
+import React from 'react';
+import {FaArrowRight, FaHeart, FaComment} from 'react-icons/fa'
 
 const BannerSmallPost = ({postInfo}) => {
     return (
@@ -29,36 +29,9 @@ const BannerSmallPost = ({postInfo}) => {
                     </div>
                     
                 </div>
-                <div
-                  className=" md:text-lg text-white italic "
-                  style={{ fontSize: "12px" }}
-                >
-                  {postInfo.timeForRead}
-                </div>
-              </div>
-              <div className="mt-1 text-lg leading-tight font-medium text-white hover:underline text-ellipsis overflow-hidden roboto-bold text-wrap-2-line">
-                {postInfo.title}
-              </div>
-              <div className="mt-5 flex flex-row justify-between align-middle">
-                <div className="flex flex-row text-sm">
-                  <FaHeart className="mt-0.5 text-[#CC3333] ml-1"></FaHeart>
-                  <p className="text-white ml-1">{postInfo.like}</p>
-                  <FaComment className="mt-0.5 ml-2 text-white"></FaComment>
-                  <p className="text-white ml-1">{postInfo.comment}</p>
-                </div>
-                <div className="flex flex-row">
-                  <p className="text-white text-sm hover:font-bold ">
-                    Xem thêm
-                  </p>
-                  <FaArrowRight className="ml-1 mt-0.5 text-lg text-[#1AA1D5]"></FaArrowRight>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-};
+        </React.Fragment>
+    );
+}
 
 export default BannerSmallPost;
