@@ -9,6 +9,7 @@ import HoGuomImg from "../../assets/images/ho_guom.travel.jpg";
 import { FaAngleRight } from "react-icons/fa";
 import { BsBookmark } from "react-icons/bs";
 import { FaHeart, FaComment } from "react-icons/fa";
+import CommentSection from "../culture/details/CommentSection";
 
 export default function DetailedTravelBlog() {
   const postsHighlight = [
@@ -192,6 +193,11 @@ export default function DetailedTravelBlog() {
           <br />
           <br />
           Chúc bạn có một trải nghiệm tuyệt vời và đầy ý nghĩa!
+        </div>
+      </div>
+      <div className="mt-20 mx-20  border border-solid border-gray-300 ">
+        <div className="mx-10 my-10">
+          <CommentSection />
         </div>
       </div>
       <div className="pl-10 ">
