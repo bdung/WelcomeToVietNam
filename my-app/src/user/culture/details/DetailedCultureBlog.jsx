@@ -2,7 +2,8 @@ import React from "react";
 import ThumbnailSection from "./ThumbnailSection"
 import MainContent from "./MainContent";
 import RelatedSection from "./RelatedSection";
-import CommentSection from "./CommentSection";
+// import CommentSection from "./CommentSection";
+import CommentSection from "../../../components/comment/CommentSection";
 import { useParams } from "react-router-dom";
 
 const CultureDetail = ({ postInfo }) => {
