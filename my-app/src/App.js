@@ -20,12 +20,12 @@ import Search from "./user/Search";
 import Test from "./user/Test.jsx";
 
 function Page(props) {
-	if (props === 1) return <UserHomePage />;
-	else return null;
+  if (props === 1) return <UserHomePage />;
+  else return null;
 }
 function AdminPage(props) {
-	if (props === 1) return <AdminHomeScreen />;
-	else return <FoodScreen />;
+  if (props === 1) return <AdminHomeScreen />;
+  else return <FoodScreen />;
 }
 const App = () => {
 	var props = 1;
@@ -51,16 +51,16 @@ const App = () => {
 					<Route path="/login" element={<LoginScreen />} />
 					<Route path="/register" element={<Register />} />
 
-					<Route path="/create-post" element={<CreatePostScreen />} />
-					<Route path="*" element={<Error />} />
-				</Route>
-				<Route path="/admin" element={<AdminLayout />}>
-					<Route path="" element={<DashboardAdminScreen />} />
-					<Route path="post" element={<AdminHomeScreen />} />
-				</Route>
-			</Routes>
-		</div>
-	);
+          <Route path="/create-post" element={<CreatePostScreen />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="" element={<DashboardAdminScreen />} />
+          <Route path="post" element={<AdminHomeScreen />} />
+        </Route>
+      </Routes>
+    </div>
+  );
 };
 
 export default App;

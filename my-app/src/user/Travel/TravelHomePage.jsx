@@ -8,6 +8,8 @@ import HoiAnImg from "../../assets/images/hoi_an.travel.jpg";
 import NhaTrangImg from "../../assets/images/nha_trang.travel.jpg";
 import HaLongImg from "../../assets/images/ha_long_bay.travel.jpg";
 import HoGuomImg from "../../assets/images/ho_guom.travel.jpg";
+import Coverflow from "react-coverflow";
+import BannerSmallPost from "../../components/BannerSmallPost";
 
 export default function TravelHomePage() {
   const lastestPost = [
@@ -60,32 +62,7 @@ export default function TravelHomePage() {
       comment: "13",
     },
   ];
-  const postsFood = [
-    {
-      url: "https://img.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-wall_181624-34158.jpg?w=996&t=st=1691328169~exp=1691328769~hmac=852a451b5dfd23dc9e3f342af39a8a8431b96abd6a8eb98ddc638dc4178d0e63",
-      title: "Những món ngon không nên bỏ lỡ khi đến Hà Nội!",
-      uploadTime: "03/04/2023",
-      timeForRead: "3 phút đọc",
-      like: "10",
-      comment: "2",
-    },
-    {
-      url: "https://img.freepik.com/free-photo/flat-lay-fresh-sandwiches-chopping-board_23-2148381180.jpg?w=360&t=st=1691328234~exp=1691328834~hmac=59018fe95a4583aa7c2c9870008a24f0d41f49b3624eb3a7fc08c542a5089487",
-      title: "Bí mật không thể bật mí của bánh mì vỉa hè??",
-      uploadTime: "05/04/2023",
-      timeForRead: "4 phút đọc",
-      like: "329",
-      comment: "50",
-    },
-    {
-      url: "https://img.freepik.com/free-photo/high-angle-vietnamese-dish-with-mint_23-2148381198.jpg?w=360&t=st=1691328174~exp=1691328774~hmac=9e0953bc97d2f261475148b238f2b6ea77e0b40c478676b36fe956f888ab9918",
-      title: `Phở của Việt Nam đáng thưởng thức ra sao?`,
-      uploadTime: "03/04/2023",
-      timeForRead: "2 phút đọc",
-      like: "110",
-      comment: "24",
-    },
-  ];
+
   const postsTravel = [
     {
       url: "https://as2.ftcdn.net/v2/jpg/02/84/81/79/1000_F_284817904_ox8667zRGi9LQl4ocAGlNoV7kkqImkuQ.jpg",
@@ -111,40 +88,55 @@ export default function TravelHomePage() {
       like: "110",
       comment: "24",
     },
+    {
+      url: HoGuomImg,
+      title: "Hồ Gươm - Điểm đến không thể bỏ qua khi đến Hà Nội",
+      uploadTime: "03/04/2023",
+      timeForRead: "2 phút đọc",
+      like: "420",
+      comment: "13",
+    },
+    {
+      url: NhaThoImg,
+      title: "Nhà thờ Đức Bà - Biểu tượng kiến trúc của Sài Gòn",
+      uploadTime: "05/04/2023",
+      timeForRead: "4 phút đọc",
+      like: "329",
+      comment: "50",
+    },
   ];
   const postsHighlight = [
     {
-      url: "https://img.freepik.com/free-photo/peak-bamboo-lijiang-rural-mist_1417-410.jpg?w=996&t=st=1691327697~exp=1691328297~hmac=0a5a31b3d1dc6a46ab5eda0a2c867821df306e7c112c90a950c178a555fe8599",
-      title: "Vịnh Hạ Long, một nơi không thể không đến!",
-      uploadTime: "05/04/2023",
-      timeForRead: "4 phút đọc",
-      like: "329",
-      comment: "50",
-    },
-    {
-      url: "https://img.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-wall_181624-34158.jpg?w=996&t=st=1691328169~exp=1691328769~hmac=852a451b5dfd23dc9e3f342af39a8a8431b96abd6a8eb98ddc638dc4178d0e63",
-      title: "Những món ngon không nên bỏ lỡ khi đến Hà Nội!",
+      url: SonDooongImg,
+      title: "Thiên đường bí ẩn trong lòng đất - Sơn Đoòng Việt Nam",
       uploadTime: "03/04/2023",
       timeForRead: "3 phút đọc",
-      like: "10",
-      comment: "2",
+      like: "1130",
+      comment: "244",
     },
-
     {
-      url: "https://img.freepik.com/free-photo/flat-lay-fresh-sandwiches-chopping-board_23-2148381180.jpg?w=360&t=st=1691328234~exp=1691328834~hmac=59018fe95a4583aa7c2c9870008a24f0d41f49b3624eb3a7fc08c542a5089487",
-      title: "Bí mật không thể bật mí của bánh mì vỉa hè??",
+      url: HoGuomImg,
+      title: "Hồ Gươm - Điểm đến không thể bỏ qua khi đến Hà Nội",
+      uploadTime: "03/04/2023",
+      timeForRead: "2 phút đọc",
+      like: "420",
+      comment: "13",
+    },
+    {
+      url: NhaThoImg,
+      title: "Nhà thờ Đức Bà - Biểu tượng kiến trúc của Sài Gòn",
       uploadTime: "05/04/2023",
       timeForRead: "4 phút đọc",
       like: "329",
       comment: "50",
     },
     {
-      url: "https://img.freepik.com/free-photo/high-angle-vietnamese-dish-with-mint_23-2148381198.jpg?w=360&t=st=1691328174~exp=1691328774~hmac=9e0953bc97d2f261475148b238f2b6ea77e0b40c478676b36fe956f888ab9918",
-      title: `Phở của Việt Nam đáng thưởng thức ra sao?`,
+      url: HaLongImg,
+      title: "Vịnh Hạ Long - Nơi gặp gỡ giữa trời đất và biển cả",
       uploadTime: "03/04/2023",
       timeForRead: "2 phút đọc",
-      like: "110",
-      comment: "24",
+      like: "420",
+      comment: "13",
     },
   ];
 
@@ -156,50 +148,76 @@ export default function TravelHomePage() {
           src={LandingImg}
           alt="Background"
         />
-        <div className="absolute inset-0 flex flex-col text-white font-poppins  ml-10 mt-40">
+
+        <div className="absolute inset-0 flex flex-col text-white font-poppins ml-10 mt-40">
           <div className="font-bold text-4xl ml-6 ">
             <div className="ml-20 pl-10">Đến Việt Nam</div>
             <div>Đến với thiên đường du lịch</div>
           </div>
           <div className="flex font-light text-sm font-poppins ml-9 p-5 text-center">
-            <div className=" ml-10 w-80">
+            <div className="ml-10 w-80">
               <div>
                 Bạn chẳng cần đi du lịch đâu xa cho tốn kém, bạn chỉ cần đi hết
                 đất nước Việt Nam
               </div>
             </div>
           </div>
+          <div className="absolute inset-x-0 bottom-0  mb-60 ml-20">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <button
+                type="submit"
+                class="p-1 focus:outline-none focus:shadow-outline"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                  color="white"
+                >
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </button>
+            </span>
+            <input
+              type="search"
+              name="q"
+              class="py-2 text-sm text-white bg-gray-900 pl-10 focus:outline-none focus:bg-white focus:text-gray-900 w-80 p-2 rounded-full border-2 focus:outline-none focus:ring focus:border-blue-300"
+              placeholder="Tìm kiếm bài viết..."
+              autocomplete="off"
+            />
+          </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-0  mb-60 ml-40">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-            <button
-              type="submit"
-              class="p-1 focus:outline-none focus:shadow-outline"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                class="w-6 h-6"
-                color="white"
-              >
-                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </button>
-          </span>
-          <input
-            type="search"
-            name="q"
-            class="py-2 text-sm text-white bg-gray-900 pl-10 focus:outline-none focus:bg-white focus:text-gray-900 w-80 p-2 rounded-full border-2 focus:outline-none focus:ring focus:border-blue-300"
-            placeholder="Tìm kiếm bài viết..."
-            autocomplete="off"
-          />
+        <div className="absolute top-0 right-0 w-1/2 flex flex-col justify-between">
+          <Coverflow
+            displayQuantityOfSide={2}
+            navigation={true}
+            infiniteScroll={true}
+            enableScroll
+            media={{
+              "@media (max-width: 600px)": {
+                width: "600px",
+                height: "500px",
+              },
+              "@media (min-width: 600px)": {
+                width: "600px",
+                height: "600px",
+              },
+            }}
+          >
+            {postsTravel.map((post, index) => (
+              <div key={index}>
+                <BannerSmallPost postInfo={post} />
+              </div>
+            ))}
+          </Coverflow>
         </div>
       </div>
+
       <div className="pl-10 ">
         <div className="font-medium text-4xl mb-6 mt-20">
           CÁC BÀI VIẾT NÊN ĐỌC
