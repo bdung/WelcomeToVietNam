@@ -144,12 +144,12 @@ export default function TravelHomePage() {
     <React.Fragment>
       <div className="relative">
         <img
-          className="w-full h-auto brightness-50"
+          className="w-full brightness-50"
           src={LandingImg}
           alt="Background"
         />
 
-        <div className="absolute inset-0 flex flex-col text-white font-poppins ml-10 mt-40">
+        <div className="absolute inset-0 flex flex-col text-white font-poppins ml-10 mt-10">
           <div className="font-bold text-4xl ml-6 ">
             <div className="ml-20 pl-10">Đến Việt Nam</div>
             <div>Đến với thiên đường du lịch</div>
@@ -162,7 +162,7 @@ export default function TravelHomePage() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-x-0 bottom-0  mb-60 ml-20">
+          <div className="absolute inset-x-0 bottom-0  mb-40 ml-20">
             <span class="absolute inset-y-0 left-0 flex items-center pl-2">
               <button
                 type="submit"
@@ -191,21 +191,21 @@ export default function TravelHomePage() {
             />
           </div>
         </div>
-
-        {/* <div className="absolute top-0 right-0 w-1/2 flex flex-col justify-between">
+        {/* 
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 flex flex-col justify-between mt-10">
           <Coverflow
             displayQuantityOfSide={2}
             navigation={true}
             infiniteScroll={true}
             enableScroll
             media={{
-              "@media (max-width: 600px)": {
-                width: "600px",
-                height: "500px",
+              "@media (max-width: 400px)": {
+                width: "100%",
+                height: "80vh",
               },
               "@media (min-width: 600px)": {
-                width: "600px",
-                height: "600px",
+                width: "50%x",
+                height: "60%",
               },
             }}
           >
@@ -215,7 +215,7 @@ export default function TravelHomePage() {
               </div>
             ))}
           </Coverflow>
-        </div> */}
+        // </div> */}
       </div>
 
       <div className="pl-10 ">
@@ -241,7 +241,7 @@ export default function TravelHomePage() {
           </li>
           <div className="ml-auto">
             <span className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10">
-              Xem tất cả 
+              Xem tất cả
             </span>
           </div>
         </ul>
