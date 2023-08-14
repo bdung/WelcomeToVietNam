@@ -42,7 +42,11 @@ const App = () => {
 						/>
 					</Route>
 
-					<Route path="food" element={<FoodScreen />}></Route>
+					<Route path="food" element={<FoodScreen />} />
+					<Route
+						path="/food/view-blog/:blogId"
+						element={<DetailedFoodBlog />}
+					/>
 					<Route path="culture" element={<CultureScreen />} />
 					<Route
 						path="/culture/view-blog/:blogId"
