@@ -53,7 +53,7 @@ export default function FoodBanner() {
                             id="cuisine"
                             class="text-gray-100 underline-offset-[17px] decoration-4 decoration-dotted underline decoration-white text-9xl font-princess text-stroke"
                         >
-                            Cuisine
+                            Ẩm thực
                         </h2>
 
                         <h5 class="text-gray-100 italic pl-20 py-3 font-light text-sm font-poppins">

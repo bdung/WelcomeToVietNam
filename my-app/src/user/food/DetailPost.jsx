@@ -81,18 +81,18 @@ export default function FoodBody() {
                         </div>
                     </div>
 
-                    <div class="flex flex-col divide-y-8 divide-double divide-yellow-500">
+                    {/* <div class="flex flex-col divide-y-8 divide-dotted divide-yellow-500">
                         <h1 /><h1 />
-                    </div>
-                    <div class="flex flex-col divide-y-8 divide-double divide-yellow-200">
+                    </div> */}
+                    <div class="flex flex-col divide-y-8 divide-dotted divide-yellow-200">
                         <h1 /><h1 />
                     </div>
 
-                    <div id="comment" class="">
-                        <p class="italic text-blue-400 px-10 py-3 font-roboto">
+                    <div id="comment" class="px-10 py-3">
+                        <p class="italic text-blue-400  font-roboto">
                             24 bình luận
-                            <CommentSection/>
                         </p>
+                        <CommentSection/>
                     </div>
 
                 </div>

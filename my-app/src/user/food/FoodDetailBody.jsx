@@ -11,7 +11,7 @@ export default function FoodBody() {
 
                     <div class="pl-10 py-5 pb-20">
                         {/* <h1 class="underline underline-offset-4 decoration-4 decoration-yellow-200 font-roboto font-semibold text-2xl uppercase">Bài viết tương tự</h1> */}
-                        <div className="px-10 pr-10 font-medium text-4xl my-6 uppercase text-start">Bài viết tương tự</div>
+                        <div className="px-10 pr-10 font-medium text-4xl my-6 uppercase text-center">Bài viết tương tự</div>
                         <HighlightedSection/>
                     </div>
                 </div>
