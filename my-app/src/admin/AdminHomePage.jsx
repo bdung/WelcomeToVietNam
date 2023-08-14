@@ -1,13 +1,13 @@
 import React from "react";
 import Model from "./layoutPost";
-import TextEditor from "./textEditor";
+import TextEditor from "./CKEditor";
 
 import {
 	ChevronDownIcon,
 	Cog6ToothIcon,
 	InboxArrowDownIcon,
 	LifebuoyIcon,
-	UserCircleIcon
+	UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import {
 	Button,
@@ -15,7 +15,7 @@ import {
 	MenuHandler,
 	MenuItem,
 	MenuList,
-	Typography
+	Typography,
 } from "@material-tailwind/react";
 const profileMenuItems = [
 	{
