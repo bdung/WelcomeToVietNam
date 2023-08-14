@@ -23,7 +23,7 @@ const App = () => {
           <Route index element={<UserHomePage />} />
           <Route path="travel" element={<Outlet />}>
             <Route index element={<TravelHomePage />} />
-            <Route path="view-blog/:blogId" element={<DetailedTravelBlog />} />
+            <Route path="view-blog" element={<DetailedTravelBlog />} />
           </Route>
           <Route path="food" element={<FoodScreen />} />
           <Route path="culture" element={<CultureScreen />} />

@@ -14,7 +14,7 @@ const BannerSmallPost = ({ postInfo }) => {
           }}
         >
           <div className="m-2">
-            <div className="p-3 bg-black bg-opacity-40 rounded-lg mt-56">
+            <div className=" bg-black bg-opacity-40 rounded-lg mt-56">
               <div className="flex flex-row justify-between ">
                 <div
                   className=" md:text-lg text-white italic "
