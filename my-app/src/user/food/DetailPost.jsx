@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHeart, FaShare, FaComment, FaFacebook, FaTwitter } from 'react-icons/fa'
+import { AiOutlineHeart } from 'react-icons/ai'
 import FOOD1 from "../../assets/images/food1.jpg";
 import FOOD2 from "../../assets/images/food2.jpg";
 import FOOD3 from "../../assets/images/food3.jpg";
 import CommentSection from "./CommentSection";
 
-export default function FoodBody() {
+function DetailPost() {
+    const [isActive, setIsActive] = useState(false);
+
     return (
         <React.Fragment>
             <section class="max-w-4x1 mx-auto py-10">
                 <div className="container mx-auto flex flex-row justify-between align-middle">
                     <div className="mt-10 font-roboto text-base md:text-lg lg:text-2xl text-slate-400 italic">Thứ hai, 03/04/2023 - 07:22</div>
                     <div class="mt-10 flex flex-row text-sm md:text-lg lg:text-xl">
-                        <FaHeart className="mt-0.5 text-[#CC3333] ml-1 cursor-pointer"></FaHeart>
+
+                        <div onClick={() => setIsActive(!isActive)}>
+                            {isActive ? <FaHeart className="mt-0.5 text-[#CC3333] ml-1 cursor-pointer"/> : <AiOutlineHeart className="mt-0.5 text-black ml-1 cursor-pointer"/>}
+                        </div>
+
+                        {/* <FaHeart className="mt-0.5 text-[#CC3333] ml-1 cursor-pointer"></FaHeart> */}
+
                         <p className="text-slate-500 ml-3 italic">1130</p>
                         <FaComment className="mt-0.5 ml-5 cursor-pointer"></FaComment>
                         <p className="text-slate-500 ml-3 italic">244</p>
@@ -21,6 +30,14 @@ export default function FoodBody() {
                         <FaShare className="mt-0.5 ml-5 cursor-pointer" />
                     </div>
                 </div>
+
+                {/* <div className="cursor-pointer select-none">
+       {isActive? <AiOutlineHome onClick={()=>{
+          setIsActive(!isActive)}}/>:
+      <AiFillHome onClick={()=>{
+          setIsActive(!isActive)}} />
+           }
+      </div> */}
 
                 <div class="bg-white rounded-lg mt-10 mx-20 py-10 relative">
                     <div id="body" class="py-10 pl-10 pr-5">
@@ -112,3 +129,5 @@ export default function FoodBody() {
         </React.Fragment >
     );
 }
+
+export default DetailPost;
