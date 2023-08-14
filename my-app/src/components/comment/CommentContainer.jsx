@@ -4,14 +4,11 @@ import CommentForm from './CommentForm';
 import { getCommentsData } from "../../assets/js/comments"
 import { FiSend } from 'react-icons/fi';
 
-const CommentContainer = ({ logginedUserId }) => {
+const CommentContainer = ({ logginedUser }) => {
 
     const [comments, setComments] = useState([]);
     const mainComments = comments.filter(comment => comment.parent === null);
     const [affectedComment, setAffectedComment] = useState(null);
-    
-
-    console.log(comments);
 
     useEffect(() => {
         (async () => {
@@ -24,7 +21,8 @@ const CommentContainer = ({ logginedUserId }) => {
             _id: Math.random().toString(),
             user: {
                 _id: "a",
-                name: "Mohammad Rezaii",
+                name: "Trần Văn A",
+                avatar: "http://localhost:3000/assets/culture_blog_01.jpg"
             },
             desc: value,
             post: "1",
@@ -67,13 +65,16 @@ const CommentContainer = ({ logginedUserId }) => {
     return (
         <React.Fragment>
             <div>
-                <CommentForm btnLabel={<FiSend />} formSubmitHandler={(value) => addCommentHandler(value)} />
+                <CommentForm 
+                    btnLabel={<FiSend />} 
+                    formSubmitHandler={(value) => addCommentHandler(value)} 
+                    logginedUser={logginedUser}/>
                 <div className="space-y-4 mt-8">
                     {mainComments.map((comment) => (
                         <Comment
                             key={comment._id}
                             comment={comment}
-                            logginedUserId={logginedUserId}
+                            logginedUser={logginedUser}
                             affectedComment={affectedComment}
                             setAffectedComment={setAffectedComment}
                             addComment={addCommentHandler}

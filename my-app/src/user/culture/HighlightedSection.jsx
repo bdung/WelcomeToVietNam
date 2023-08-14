@@ -49,8 +49,8 @@ const HighlightedSection = () => {
 
   return (
     <React.Fragment>
-      <div className="font-roboto font-bold text-4xl mx-10 mt-20">CÁC BÀI VIẾT NÊN ĐỌC</div>
-      <ul className="mx-20 my-10 lg:flex flex-row font-poppins text-base font-normal lg:text-[14px] text-bold relative">
+      <div className="font-roboto text-center font-bold text-4xl mx-20 mt-20">CÁC BÀI VIẾT NÊN ĐỌC</div>
+      <ul className="mx-20 my-10 lg:flex flex-row font-poppins text-base font-normal lg:text-[14px] text-bold text-center justify-center relative">
         <li className="hover:underline text-[#D4A373]">Tất cả</li>
         <li className="hover:underline lg:ml-5">Địa phương</li>
         <li className="hover:underline lg:ml-5">Nghệ thuật</li>

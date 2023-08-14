@@ -7,7 +7,7 @@ import CommentForm from './CommentForm';
 
 const Comment = ({
     comment,
-    logginedUserId,
+    logginedUser,
     affectedComment,
     setAffectedComment,
     addComment,
@@ -15,32 +15,32 @@ const Comment = ({
     deleteComment,
     replies,
     parentId = null }) => {
-    const isUserLoggined = Boolean(logginedUserId);
-    const isCommentBelongsToUser = logginedUserId === comment.user._id;
+    const isUserLoggined = Boolean(logginedUser.userId);
+    const isCommentBelongsToUser = logginedUser.userId === comment.user._id;
     const isReplying = affectedComment && affectedComment.type === 'replying' && affectedComment._id === comment._id;
     const isEditing = affectedComment && affectedComment.type === 'editing' && affectedComment._id === comment._id;
     const repliedCommentId = parentId ? parentId : comment._id;
     const replyOnUserId = comment.user._id;
-    
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [commentToDelete, setCommentToDelete] = useState("");
 
     const openModal = (comment) => {
         setCommentToDelete(comment);
         setIsModalOpen(true);
-      };
-    
-      const closeModal = () => {
+    };
+
+    const closeModal = () => {
         setCommentToDelete("");
         setIsModalOpen(false);
-      };
-    
-      const handleDelete = () => {
+    };
+
+    const handleDelete = () => {
         // Perform the actual deletion logic here
         console.log("Deleting comment");
         if (commentToDelete !== "") deleteComment(comment._id);
         closeModal();
-      };
+    };
 
 
     return (
@@ -53,45 +53,51 @@ const Comment = ({
                 />
             )}
             <div className="flex flex-row gap-x-3 bg-[#ECECEC] p-3 rounded-xl">
-                <div className="rounded-full w-14 h-14 aspect-square mr-5"
-                    style={{ backgroundImage: `url(${AVATAR1})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
-                />
+                {!isEditing && (
+                    <div className="rounded-full w-14 h-14 aspect-square mr-5"
+                        style={{ backgroundImage: `url(${comment.user.avatar})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+                    />
+                )}
                 <div className="flex-1 flex flex-col text-start">
-                    <h5 className="font-bold text-dark-hard text-xs">
-                        {comment.user.name}
-                    </h5>
-                    <span className="text-xs text-dark-light">
-                        {new Date(comment.createdAt).toLocaleDateString("vi-VN", {
-                            weekday: "short",
-                            day: "numeric",
-                            month: "short",
-                            year: "numeric",
-                            hour: "numeric",
-                            minute: "numeric",
-                            second: "numeric",
-                        })}
-                    </span>
+
                     {!isEditing && (
-                        <p className="font-roboto mt-[10px] text-dark-light">
-                            {comment.desc}
-                        </p>
+                        <>
+                            <h5 className="font-bold text-dark-hard text-xs">
+                                {comment.user.name}
+                            </h5>
+                            <span className="text-xs text-dark-light">
+                                {new Date(comment.createdAt).toLocaleDateString("vi-VN", {
+                                    weekday: "short",
+                                    day: "numeric",
+                                    month: "short",
+                                    year: "numeric",
+                                    hour: "numeric",
+                                    minute: "numeric",
+                                    second: "numeric",
+                                })}
+                            </span>
+                            <p className="font-roboto mt-[10px] text-dark-light">
+                                {comment.desc}
+                            </p>
+                        </>
                     )}
 
                     {isEditing && (
                         <CommentForm btnLabel={<FiSend />}
+                            logginedUser={logginedUser}
                             formSubmitHandler={(value) => updateComment(value, comment._id)}
                             formCancelHandler={() => setAffectedComment(null)}
                             initialText={comment.desc}>
 
                         </CommentForm>
                     )}
-                    <div className="flex items-center gap-x-3 text-dark-light font-roboto text-sm my-3">
+                    <div className="flex items-center gap-x-3 text-dark-light be-viet-nam-pro-regular text-sm my-3">
                         {isUserLoggined && (
                             <button className="flex items-center space-x-2"
                                 type="submit"
                                 onClick={() => setAffectedComment({ type: 'replying', _id: comment._id })}>
-                                <FiMessageSquare className="w-4 h-auto" />
-                                <span>Reply</span>
+                                {/* <FiMessageSquare className="w-4 h-auto" /> */}
+                                <span>Phản hồi</span>
                             </button>
                         )}
                         {isCommentBelongsToUser && (
@@ -99,20 +105,21 @@ const Comment = ({
                                 <button className="flex items-center space-x-2"
                                     type="submit"
                                     onClick={() => setAffectedComment({ type: 'editing', _id: comment._id })}>
-                                    <FiEdit2 className="w-4 h-auto" />
-                                    <span>Edit</span>
+                                    {/* <FiEdit2 className="w-4 h-auto" /> */}
+                                    <span>Chỉnh sửa</span>
                                 </button>
-                                <button className="flex items-center space-x-2"
+                                <button className="flex items-center space-x-2 text-[#F10000]"
                                     type="submit"
-                                    onClick={(comment) => {openModal(comment)}}>
-                                    <FiTrash className="w-4 h-auto" />
-                                    <span>Delete</span>
+                                    onClick={(comment) => { openModal(comment) }}>
+                                    {/* <FiTrash className="w-4 h-auto" /> */}
+                                    <span>Xóa</span>
                                 </button>
                             </>
                         )}
                     </div>
                     {isReplying && (
                         <CommentForm btnLabel={<FiSend />}
+                            logginedUser={logginedUser}
                             formSubmitHandler={(value) => addComment(value, repliedCommentId, replyOnUserId)}
                             formCancelHandler={() => setAffectedComment(null)} />
                     )}
@@ -126,7 +133,7 @@ const Comment = ({
                                     updateComment={updateComment}
                                     affectedComment={affectedComment}
                                     setAffectedComment={setAffectedComment}
-                                    logginedUserId={logginedUserId}
+                                    logginedUser={logginedUser}
                                     parentId={comment._id}
                                     replies={[]} />
                             ))}

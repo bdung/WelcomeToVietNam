@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { IoMdTrash } from "react-icons/io";
-import AVATAR1 from "../../assets/images/avatar1.jpg";
 
-const CommentForm = ({ btnLabel, formSubmitHandler, formCancelHandler = null, initialText = "" }) => {
+const CommentForm = ({ 
+    btnLabel,
+    logginedUser, 
+    formSubmitHandler, 
+    formCancelHandler = null, 
+    initialText = "" }) => {
 
     const [value, setValue] = useState(initialText);
 
@@ -16,14 +20,14 @@ const CommentForm = ({ btnLabel, formSubmitHandler, formCancelHandler = null, in
         <React.Fragment>
             <div className="flex flex-row relative">
                 <div className="rounded-full w-14 h-14 aspect-square mr-5"
-                    style={{ backgroundImage: `url(${AVATAR1})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+                    style={{ backgroundImage: `url(${logginedUser.avatar})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
                 />
                 <form onSubmit={submitHandler}>
                     <div>
                         <textarea id="freeform" name="freeform"
                             rows="3" cols="200" wrap="soft"
-                            placeholder='Hãy chia sẻ cảm nghĩ của bạn...'
-                            className='w-full focus:outline-none mx-auto'
+                            placeholder='Để lại bình luận...'
+                            className='w-full focus:outline-none mx-auto pl-[8px] pt-[2px]'
                             value={value}
                             onChange={(e) => setValue(e.target.value)}
                         />

@@ -36,12 +36,12 @@ const App = () => {
 				<Route path="/" element={<UserLayout />}>
 					<Route path="" element={Page(props)} />
 					<Route path="travel" element={<TravelHomePage />}>
-          <Route
-						path="detail/:blogId"
-						element={<DetailedTravelBlog />}
-					/>
-          </Route>
-					
+						<Route
+							path="detail/:blogId"
+							element={<DetailedTravelBlog />}
+						/>
+					</Route>
+
 
 					<Route path="food" element={<FoodScreen />}>
 						<Route
@@ -49,15 +49,14 @@ const App = () => {
 							element={<DetailedFoodBlog />}
 						/>
 					</Route>
-<<<<<<< HEAD
 					<Route path="food" element={<FoodScreen />} />
 					<Route path="culture" element={<CultureScreen />} />
 					<Route
-						path="/culture/view-blog/:blogId"
+						path="/culture/detail/:blogId"
 						element={<DetailedCultureBlog />}
 					/>
-					{/* <Route path="/search" element={<Search />} />
-					<Route path="/test" element={<Test />} /> */}
+					<Route path="/search" element={<Search />} />
+					<Route path="/test" element={<Test />} />
 					<Route path="/login" element={<LoginScreen />} />
 					<Route path="/register" element={<Register />} />
 
@@ -66,20 +65,6 @@ const App = () => {
 					<Route path="/admin" element={<AdminHomeScreen />}>
 					</Route>
 				</Route>
-=======
-					<Route path="culture" element={<CultureScreen />} />
-					<Route
-						path="detail/:blogId"
-						element={<DetailedCultureBlog />}
-					/>
-				</Route>
-
-				<Route path="/search" element={<Search />} />
-				<Route path="/test" element={<Test />} />
-				<Route path="/login" element={<LoginScreen />} />
-				<Route path="/register" element={<Register />} />
-
->>>>>>> 0b87dd80dd30f596364541d4c5c6247c1b5e85db
 				<Route path="/create-post" element={<CreatePostScreen />} />
 				<Route path="*" element={<Error />} />
 
