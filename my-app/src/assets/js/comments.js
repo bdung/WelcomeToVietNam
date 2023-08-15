@@ -12,6 +12,8 @@ export const getCommentsData = async () => {
       parent: null,
       replyOnUser: null,
       createdAt: "2022-12-31T17:22:05.092+0000",
+      like: 120,
+      like_status: false,
     },
     {
       _id: "11",
@@ -25,6 +27,8 @@ export const getCommentsData = async () => {
       parent: "10",
       replyOnUser: "a",
       createdAt: "2022-12-31T17:22:05.092+0000",
+      like: 10,
+      like_status: false,
     },
     {
       _id: "12",
@@ -38,6 +42,8 @@ export const getCommentsData = async () => {
       parent: null,
       replyOnUser: null,
       createdAt: "2022-12-31T17:22:05.092+0000",
+      like: 54,
+      like_status: false,
     },
     {
       _id: "13",
@@ -51,6 +57,8 @@ export const getCommentsData = async () => {
       parent: null,
       replyOnUser: null,
       createdAt: "2022-12-31T17:22:05.092+0000",
+      like: 32,
+      like_status: true,
     },
   ];
 };

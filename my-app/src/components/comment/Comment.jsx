@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AVATAR1 from "../../assets/images/avatar1.jpg";
-import { FiMessageSquare, FiEdit2, FiTrash, FiSend } from 'react-icons/fi';
+import { FiSend } from 'react-icons/fi';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import DeletePopupModal from './DeletePopupModal';
 import CommentForm from './CommentForm';
 
@@ -13,6 +13,7 @@ const Comment = ({
     addComment,
     updateComment,
     deleteComment,
+    likeComment,
     replies,
     parentId = null }) => {
     const isUserLoggined = Boolean(logginedUser.userId);
@@ -36,8 +37,6 @@ const Comment = ({
     };
 
     const handleDelete = () => {
-        // Perform the actual deletion logic here
-        console.log("Deleting comment");
         if (commentToDelete !== "") deleteComment(comment._id);
         closeModal();
     };
@@ -93,7 +92,7 @@ const Comment = ({
                     )}
                     <div className="flex items-center gap-x-3 text-dark-light be-viet-nam-pro-regular text-sm my-3">
                         {isUserLoggined && (
-                            <button className="flex items-center space-x-2"
+                            <button className="flex items-center space-x-2 hover:font-bold cursor-pointer"
                                 type="submit"
                                 onClick={() => setAffectedComment({ type: 'replying', _id: comment._id })}>
                                 {/* <FiMessageSquare className="w-4 h-auto" /> */}
@@ -102,13 +101,13 @@ const Comment = ({
                         )}
                         {isCommentBelongsToUser && (
                             <>
-                                <button className="flex items-center space-x-2"
+                                <button className="flex items-center space-x-2 hover:font-bold cursor-pointer"
                                     type="submit"
                                     onClick={() => setAffectedComment({ type: 'editing', _id: comment._id })}>
                                     {/* <FiEdit2 className="w-4 h-auto" /> */}
                                     <span>Chỉnh sửa</span>
                                 </button>
-                                <button className="flex items-center space-x-2 text-[#F10000]"
+                                <button className="flex items-center space-x-2 text-[#F10000] hover:font-bold cursor-pointer"
                                     type="submit"
                                     onClick={(comment) => { openModal(comment) }}>
                                     {/* <FiTrash className="w-4 h-auto" /> */}
@@ -116,6 +115,16 @@ const Comment = ({
                                 </button>
                             </>
                         )}
+                        
+                        <div className="bg-white w-auto rounded-full flex flex-row">
+                                <button className="text-[#CC3333] ml-1 cursor-pointer" 
+                                        onClick={() => likeComment(comment._id)}>
+                                    {comment.like_status ? (
+                                        <span><FaHeart></FaHeart></span>
+                                    ): (<span><FaRegHeart></FaRegHeart></span>)}
+                                </button>
+                                <p className="text-black my-1 mx-1 text-xs md:text-xs lg:text-sm">{comment.like}</p>
+                        </div>
                     </div>
                     {isReplying && (
                         <CommentForm btnLabel={<FiSend />}
@@ -133,6 +142,7 @@ const Comment = ({
                                     updateComment={updateComment}
                                     affectedComment={affectedComment}
                                     setAffectedComment={setAffectedComment}
+                                    likeComment={likeComment}
                                     logginedUser={logginedUser}
                                     parentId={comment._id}
                                     replies={[]} />

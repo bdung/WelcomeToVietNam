@@ -29,6 +29,7 @@ const CommentContainer = ({ logginedUser }) => {
             parent: parent,
             replyOnUser: replyOnUser,
             createdAt: new Date().toISOString(),
+            like: 0,
         }
         setComments((curState) => {
             return [newComment, ...curState];
@@ -59,8 +60,20 @@ const CommentContainer = ({ logginedUser }) => {
         return comments.filter((comment) => comment.parent === commentId)
         .sort((former, latter) => {
             return new Date(former.createdAt).getTime() - new Date(latter.createdAt).getTime();})
-        
     }
+
+    const likeCommentHandler = (commentId) => {
+        setComments((curState) => {
+            return curState.map((comment) => {
+                if (comment._id === commentId) {
+                    const updatedLikeStatus = !comment.like_status;
+                    const updatedLikeCount = updatedLikeStatus ? comment.like + 1 : comment.like - 1;
+                    return { ...comment, like: updatedLikeCount, like_status: updatedLikeStatus};
+                }
+                return comment;
+            });
+        });
+    };
 
     return (
         <React.Fragment>
@@ -83,6 +96,7 @@ const CommentContainer = ({ logginedUser }) => {
                             addComment={addCommentHandler}
                             updateComment={updateCommentHandler}
                             deleteComment={deleteCommentHandler}
+                            likeComment={likeCommentHandler}
                             replies={getRepliesHandler(comment._id)}/>
                     ))}
                 </div>

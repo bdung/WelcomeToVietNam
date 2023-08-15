@@ -11,10 +11,6 @@ const CommentSection = () => {
 
     return (
         <React.Fragment>
-
-            <div class="container mx-auto text-left italic text-blue-400 font-roboto">
-                24 bình luận
-            </div>
             <div className="flex items-center max-w-screen-lg mx-auto relative my-5">
                 <CommentContainer logginedUser={currentUser}/>
             </div>

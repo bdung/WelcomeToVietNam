@@ -36,7 +36,7 @@ const CommentForm = ({
 
                                 <button type="submit"
                                     className="absolute top-[50%] -translate-x-0 translate-y-[-50%] 
-                                bottom-2 right-12 lg:right-20 text-xl md:text-2xl lg:text-4xl text-[#1AA1D5] cursor-pointer"
+                                bottom-2 lg:bottom-0 right-12 lg:right-[70px] text-xl md:text-2xl lg:text-4xl text-[#1AA1D5] cursor-pointer"
                                     onClick={formCancelHandler}>
                                     <IoMdTrash />
                                 </button>
