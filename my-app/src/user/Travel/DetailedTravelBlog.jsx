@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import BannerImg from "../../assets/images/son_doong.travel.jpg";
 import Img_5 from "../../assets/images/son_doong_5.travel.jpg";
 import SmallPost from "../../components/SmallPost";
@@ -7,13 +7,19 @@ import NhaThoImg from "../../assets/images/nha_tho.travel.jpg";
 import HaLongImg from "../../assets/images/ha_long_bay.travel.jpg";
 import HoGuomImg from "../../assets/images/ho_guom.travel.jpg";
 import { FaAngleRight } from "react-icons/fa";
-import { BsBookmark } from "react-icons/bs";
+import { BsBookmark, BsBookmarkHeartFill } from 'react-icons/bs'
 import { FaHeart, FaComment } from "react-icons/fa";
+import { AiOutlineHeart } from 'react-icons/ai'
 import CommentSection from "../culture/details/CommentSection";
 
 export default function DetailedTravelBlog() {
+  const [isActive, setIsActive] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
+
   const postsHighlight = [
     {
+      id: 1,
+			page: 'travel',
       url: HoiAnImg,
       title: "Hội An - Nơi giao thoa văn hóa và nét đẹp kiến trúc...",
       uploadTime: "03/04/2023",
@@ -22,6 +28,8 @@ export default function DetailedTravelBlog() {
       comment: "13",
     },
     {
+      id: 2,
+			page: 'travel',
       url: HoGuomImg,
       title: "Hồ Gươm - Điểm đến không thể bỏ qua khi đến Hà Nội",
       uploadTime: "03/04/2023",
@@ -30,6 +38,8 @@ export default function DetailedTravelBlog() {
       comment: "13",
     },
     {
+      id: 3,
+			page: 'travel',
       url: NhaThoImg,
       title: "Nhà thờ Đức Bà - Biểu tượng kiến trúc của Sài Gòn",
       uploadTime: "05/04/2023",
@@ -38,6 +48,8 @@ export default function DetailedTravelBlog() {
       comment: "50",
     },
     {
+      id: 4,
+			page: 'travel',
       url: HaLongImg,
       title: "Vịnh Hạ Long - Nơi gặp gỡ giữa trời đất và biển cả",
       uploadTime: "03/04/2023",
@@ -51,7 +63,9 @@ export default function DetailedTravelBlog() {
       <div className="relative">
         <img className="w-full " src={BannerImg} alt="Background" />
         <div class="z-10 absolute right-5 top-20">
-          <BsBookmark class="text-4xl md:text-4xl lg:text-3xl text-white cursor-pointer" />
+          <div onClick={() => setIsActive2(!isActive2)}>
+            {isActive2 ? <BsBookmarkHeartFill class="text-5xl md:text-5xl lg:text-6xl text-white cursor-pointer" /> : <BsBookmark class="text-5xl md:text-5xl lg:text-6xl text-white cursor-pointer" />}
+          </div>
         </div>
         <div className=" absolute inset-0 flex flex-col text-white font-poppins  justify-center text-center  ">
           <div className="font-bold text-3xl bg-black bg-opacity-20 rounded-lg pt-10  pl-10 pr-10 mr-60 mt-20 ml-60">
@@ -62,7 +76,10 @@ export default function DetailedTravelBlog() {
               SƠN ĐOÒNG VIỆT NAM
             </div>
             <div class="ml-40 pl-80 mt-10 flex flex-row text-sm md:text-4xl lg:text-2xl ">
-              <FaHeart className="mt-0.5 text-[#CC3333] ml-1 cursor-pointer "></FaHeart>
+
+              <div onClick={() => setIsActive(!isActive)}>
+                {isActive ? <FaHeart className="mt-0.5 text-[#CC3333] ml-1 cursor-pointer" /> : <AiOutlineHeart className="mt-0.5 text-black ml-1 cursor-pointer" />}
+              </div>
               <p className="font-light">1130</p>
               <FaComment className="mt-0.5 ml-10 cursor-pointer"></FaComment>
               <p className="font-light">244</p>

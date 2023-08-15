@@ -6,7 +6,9 @@ import './style.css';
 
 export default function FoodBanner() {
     const posts = [
-        {
+        { 
+			id: "1",
+			page: "food",
             url: "https://andrews.edu.vn/wp-content/uploads/am-thuc-trung-bo-mba-andrews.jpg",
             title: "Văn hóa ẩm thực của Việt Nam đa dạng như thế nào?",
             uploadTime: "03/04/2023",
@@ -15,6 +17,8 @@ export default function FoodBanner() {
             comment: "24"
         },
         {
+			id: "1",
+			page: "food",
             url: "https://img.freepik.com/free-photo/high-angle-vietnamese-dish-with-mint_23-2148381198.jpg?w=360&t=st=1691328174~exp=1691328774~hmac=9e0953bc97d2f261475148b238f2b6ea77e0b40c478676b36fe956f888ab9918",
             title: `Phở của Việt Nam đáng thưởng thức ra sao?`,
             uploadTime: "03/04/2023",
@@ -23,6 +27,8 @@ export default function FoodBanner() {
             comment: "24"
         },
         {
+			id: "1",
+			page: "food",
             url: "https://img.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-wall_181624-34158.jpg?w=996&t=st=1691328169~exp=1691328769~hmac=852a451b5dfd23dc9e3f342af39a8a8431b96abd6a8eb98ddc638dc4178d0e63",
             title: "Những món ngon không nên bỏ lỡ khi đến Hà Nội!",
             uploadTime: "03/04/2023",
@@ -30,7 +36,9 @@ export default function FoodBanner() {
             like: "10",
             comment: "2"
         },
-        // {
+        // {            
+			// id: "1",
+			// page: "food",
         //     url: "https://img.freepik.com/free-photo/flat-lay-fresh-sandwiches-chopping-board_23-2148381180.jpg?w=360&t=st=1691328234~exp=1691328834~hmac=59018fe95a4583aa7c2c9870008a24f0d41f49b3624eb3a7fc08c542a5089487",
         //     title: "Bí mật không thể bật mí của bánh mì vỉa hè??",
         //     uploadTime: "05/04/2023",

@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowRight, FaHeart, FaComment } from "react-icons/fa";
+import { AiOutlineHeart } from 'react-icons/ai'
 import { Link } from "react-router-dom";
 
 const BlogPost = ({ postInfo }) => {
+	const [isActive, setIsActive] = useState(false);
+
 	return (
 		<React.Fragment>
-			<Link to={`/${postInfo.page}/detail/${postInfo.id}`}>
-				<div className="max-w-[240px] mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl relative">
-					<div className="md:flex flex-col">
+			<div className="max-w-[240px] mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl relative">
+				<div className="md:flex flex-col">
+					<Link to={`/${postInfo.page}/detail/${postInfo.id}`}>
+
 						<div className="md:shrink-0 ">
 							{/* <img className="h-48 w-full object-cover md:h-full md:w-48" src={postInfo.url} alt={postInfo.title}/> */}
 							<div
@@ -21,7 +25,10 @@ const BlogPost = ({ postInfo }) => {
 								}}
 							/>
 						</div>
-						<div className="p-5">
+					</Link>
+					<div className="p-5">
+						<Link to={`/${postInfo.page}/detail/${postInfo.id}`}>
+
 							<div className="flex flex-row justify-between">
 								<div
 									className=" md:text-lg text-slate-400 italic "
@@ -40,28 +47,32 @@ const BlogPost = ({ postInfo }) => {
 							<div className="mt-1 text-lg leading-tight font-medium text-black hover:underline text-ellipsis overflow-hidden roboto-bold text-wrap-2-line">
 								{postInfo.title}
 							</div>
-							<div className="mt-5 flex flex-row justify-between align-middle">
-								<div className="flex flex-row text-sm">
-									<FaHeart className="mt-0.5 text-[#CC3333] ml-1"></FaHeart>
-									<p className="text-slate-500 ml-1">
-										{postInfo.like}
-									</p>
-									<FaComment className="mt-0.5 ml-2"></FaComment>
-									<p className="text-slate-500 ml-1">
-										{postInfo.comment}
-									</p>
+						</Link>
+						<div className="mt-5 flex flex-row justify-between align-middle">
+							<div className="flex flex-row text-sm">
+								<div onClick={() => setIsActive(!isActive)}>
+									{isActive ? <FaHeart className="mt-0.5 text-[#CC3333] ml-1 cursor-pointer" /> : <AiOutlineHeart className="mt-0.5 text-black ml-1 cursor-pointer" />}
 								</div>
+								<p className="text-slate-500 ml-1">
+									{postInfo.like}
+								</p>
+								<FaComment className="mt-0.5 ml-2"></FaComment>
+								<p className="text-slate-500 ml-1">
+									{postInfo.comment}
+								</p>
+							</div>
+							<Link to={`/${postInfo.page}/detail/${postInfo.id}`}>
 								<div className="flex flex-row">
 									<p className="text-slate-500 text-sm hover:text-slate-800">
 										Xem thêm
 									</p>
 									<FaArrowRight className="ml-1 mt-0.5 text-lg text-[#1AA1D5]"></FaArrowRight>
 								</div>
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>
-			</Link>
+			</div>
 		</React.Fragment>
 	);
 };
