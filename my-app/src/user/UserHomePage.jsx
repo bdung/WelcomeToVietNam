@@ -3,6 +3,7 @@ import HomeImg from "../assets/images/home_img.png";
 import SmallPost from "../components/SmallPost";
 import { FaAngleRight } from "react-icons/fa";
 
+
 export default function UserHomePage() {
 	const postsCulture = [
 		{
@@ -71,13 +72,13 @@ export default function UserHomePage() {
 	const postsTravel = [
 		{
 			id: "1",
-			page: "travel",
-			url: "https://as2.ftcdn.net/v2/jpg/02/84/81/79/1000_F_284817904_ox8667zRGi9LQl4ocAGlNoV7kkqImkuQ.jpg",
-			title: "Ruộng bậc thang Hà Giang - nét đẹp miền núi...",
+			url: "https://www.remotelands.com/remotenew1/dist/images/country/vietnam/city/13100104/b201009113.jpg",
+			title: "Thiên đường bí ẩn trong lòng đất - Sơn Đoòng Việt Nam",
 			uploadTime: "03/04/2023",
 			timeForRead: "3 phút đọc",
-			like: "10",
-			comment: "2",
+			like: "1130",
+			comment: "244",
+			page: "travel",
 		},
 		{
 			id: "2",
