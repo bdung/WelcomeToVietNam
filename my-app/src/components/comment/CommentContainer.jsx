@@ -65,6 +65,9 @@ const CommentContainer = ({ logginedUser }) => {
     return (
         <React.Fragment>
             <div>
+                <div class="container mx-auto text-left italic text-blue-400 font-roboto">
+                    { Object.keys(comments).length} bình luận
+                </div>
                 <CommentForm 
                     btnLabel={<FiSend />} 
                     formSubmitHandler={(value) => addCommentHandler(value)} 
