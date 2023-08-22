@@ -51,7 +51,7 @@ const RelatedSection = () => {
   return (
     <React.Fragment>
       <div className="related-section container mx-auto relative">
-        <div className="font-roboto font-bold text-2xl md:text-2xl lg:text-4xl mx-10 mt-6">BÀI VIẾT LIÊN QUAN</div>
+        <div className="font-roboto text-center font-bold text-2xl md:text-2xl lg:text-4xl mx-10 mt-6">BÀI VIẾT LIÊN QUAN</div>
 
         <div className="mt-10 flex items-center justify-center max-w-screen-lg mx-auto relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">

@@ -48,7 +48,7 @@ export default function MainContent() {
                 </div>
 
                 <div className="mt-10 mx-5 font-roboto text-base md:text-lg lg:text-xl text-justify ">
-                    Những năm gần đây, các thế lực thù địch ráo riết chống phá cách mạng V  iệt Nam trên tất cả các lĩnh vực của đời sống xã hội, trong đó có văn hóa truyền thống. Sự chống phá này đã tạo ra hệ lụy không hề nhỏ, là một thứ “giặc nội xâm” đã và đang làm băng hoại thuần phong mỹ tục, giá trị truyền thống của dân tộc. Xét về mục tiêu, nội dung và lực lượng tiến hành của các thế lực thù địch trên lĩnh vực văn hóa bao gồm hai điểm chính, đan xen, hỗ trợ và có quan hệ chặt chẽ với nhau.
+                    Những năm gần đây, các thế lực thù địch ráo riết chống phá cách mạng Việt Nam trên tất cả các lĩnh vực của đời sống xã hội, trong đó có văn hóa truyền thống. Sự chống phá này đã tạo ra hệ lụy không hề nhỏ, là một thứ “giặc nội xâm” đã và đang làm băng hoại thuần phong mỹ tục, giá trị truyền thống của dân tộc. Xét về mục tiêu, nội dung và lực lượng tiến hành của các thế lực thù địch trên lĩnh vực văn hóa bao gồm hai điểm chính, đan xen, hỗ trợ và có quan hệ chặt chẽ với nhau.
                 </div>
 
                 <div className="mt-10 mx-5 font-roboto text-base md:text-lg lg:text-xl text-justify ">

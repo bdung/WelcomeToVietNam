@@ -25,7 +25,7 @@ const CultureScreen = () => {
       <div className="z-1 max-w-full h-[39.5rem] w-full m-auto relative group">
         <ImageSlider slides={slides} />
       </div>
-      <MainContent/>
+      <MainContent className="bg-neutral-100"/>
     </div>
   );
 };

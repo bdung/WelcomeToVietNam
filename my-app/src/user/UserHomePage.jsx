@@ -3,7 +3,6 @@ import HomeImg from "../assets/images/home_img.png";
 import SmallPost from "../components/SmallPost";
 import { FaAngleRight } from "react-icons/fa";
 
-
 export default function UserHomePage() {
 	const postsCulture = [
 		{
@@ -172,7 +171,7 @@ export default function UserHomePage() {
 						<SmallPost postInfo={post} key={postIndex} />
 					))}
 				</div>
-				<a className="text-black  " href="/travel">
+				<a className="text-black hover:underline " href="/travel">
 					<div className="font-bold text-6xl mb-6">DU LỊCH</div>
 					<div className="font-lg  text-lg w-80 ">
 						Bao gồm các bài viết về các địa điểm du lịch và những
@@ -182,7 +181,7 @@ export default function UserHomePage() {
 			</div>
 
 			<div className="flex justify-around items-center font-poppins  ">
-				<a href="/food" className="text-black  ">
+				<a href="/food" className="text-black hover:underline ">
 					<div className="font-bold text-6xl mb-6">ẨM THỰC</div>
 					<div className=" font-base font-medium text-lg w-80 ">
 						Những món ăn ngon đặc trưng cho các vùng miền.
@@ -201,7 +200,10 @@ export default function UserHomePage() {
 						<SmallPost postInfo={post} key={postIndex} />
 					))}
 				</div>
-				<a href="/culture" className="text-black font-poppins ">
+				<a
+					href="/culture"
+					className="text-black font-poppins hover:underline "
+				>
 					<div className="font-bold text-6xl mb-6">VĂN HÓA</div>
 					<div className="font-medium font-base  text-lg w-80 ">
 						Bao gồm các bài viết về văn hóa đặc sắc mang đậm bản sắc
