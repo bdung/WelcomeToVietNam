@@ -53,7 +53,7 @@ export default function FoodBanner() {
 		<React.Fragment>
 			<div className="relative flex ">
 				<img
-					className="w-full h-2/3 brightness-50"
+					className="w-full h-[35rem] brightness-50"
 					src={BANNER}
 					alt="Background"
 				/>

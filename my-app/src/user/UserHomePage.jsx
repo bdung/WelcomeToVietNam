@@ -2,6 +2,7 @@ import React from "react";
 import HomeImg from "../assets/images/home_img.png";
 import SmallPost from "../components/SmallPost";
 import { FaAngleRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function UserHomePage() {
 	const postsCulture = [
@@ -144,6 +145,13 @@ export default function UserHomePage() {
 		},
 	];
 
+	const filter = [
+		{ name: "Tất cả", href: "#" },
+		{ name: "Du lịch", href: "#" },
+		{ name: "Ẩm thực", href: "#" },
+		{ name: "Văn hóa", href: "#" },
+	];
+
 	return (
 		<React.Fragment>
 			<div className="absolute text-white ml-9 mt-40  font-poppins">
@@ -216,24 +224,20 @@ export default function UserHomePage() {
 					CÁC BÀI VIẾT NÊN ĐỌC
 				</div>
 				<ul className="text-black-800 flex">
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10  ">
-						Tất cả
-					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10 ">
-						{" "}
-						Du lịch
-					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
-						Ẩm thực
-					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
-						Văn hóa
-					</li>
+					{filter.map((item) => (
+						<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10">
+							<NavLink
+								aria-current={item.current ? "page" : undefined}
+							>
+								{item.name}
+							</NavLink>
+						</li>
+					))}
 				</ul>
 			</div>
 
 			<div className="mt-10 flex items-center justify-center max-w-screen-lg mx-auto relative mb-20">
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mr-10">
+				<div className="flex-x-auto flex gap-4 overflow-x-auto mr-10">
 					{postsHighlight.map((post, postIndex) => (
 						<SmallPost postInfo={post} key={postIndex} />
 					))}

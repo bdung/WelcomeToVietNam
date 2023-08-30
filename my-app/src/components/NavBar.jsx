@@ -1,6 +1,16 @@
 import React from "react";
 import { BiLogoFacebook, BiLogoTiktok, BiLogoYoutube } from "react-icons/bi";
 import Account from "../admin/textEditor";
+import { NavLink } from "react-router-dom";
+
+const navigation = [
+	{ name: "Trang chủ", href: "/" },
+	{ name: "Du lịch", href: "/travel" },
+	{ name: "Ẩm thực", href: "/food" },
+	{ name: "Văn hóa", href: "/culture" },
+	{ name: "Về chúng tôi", href: "/about" },
+	{ name: "Đăng nhập", href: "/login" },
+];
 function Navbar() {
 	const verticalLine = {
 		borderLeft: "2px solid white ",
@@ -10,7 +20,8 @@ function Navbar() {
 		if (isLogin) return <a href="/login">Đăng nhập</a>;
 		else return <Account />;
 	}
-	var isLogin = false;
+
+	var isLogin = true;
 	return (
 		<nav className="z-10 w-full flex py-2 justify-between items-center navbar bg-black bg-opacity-30 absolute">
 			<div className=" pl-10 relative inset-x-0 mt-5 mb-5">
@@ -41,8 +52,35 @@ function Navbar() {
 					autocomplete="off"
 				/>
 			</div>
+
 			<ul className="text-opacity-100 list-none sm:flex hidden justify-end items-center flex-1 mr-8 text-white ">
-				<li className="active:underline font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 text-white mr-10  ">
+				{navigation.map(
+					(item) => (
+						
+						(
+							<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 text-white mr-10  ">
+								<NavLink
+									key={item.name}
+									to={item.href}
+									// className={
+									// 	item.current ? "no-underline" : "underline"
+									// }
+									className={({ isActive }) => {
+										return isActive
+											? "underline"
+											: "no-underline";
+									}}
+									aria-current={
+										item.current ? "page" : undefined
+									}
+								>
+									{item.name}
+								</NavLink>
+							</li>
+						)
+					)
+				)}
+				{/* <li className="active:underline  font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 text-white mr-10  ">
 					<a href="/">Trang chủ</a>
 				</li>
 				<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 text-white mr-10 ">
@@ -62,17 +100,17 @@ function Navbar() {
 				</li>
 				<li className="font-poppins font-normal cursor-pointer  text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 text-white mr-4 ">
 					{userLogin(isLogin)}
-				</li>
+				</li> */}
 				<li style={verticalLine}></li>
 
-				<li className="m-5 text-white text-[20px]">
+				<li className="m-5 text-white text-[20px] hover:cursor-pointer">
 					<BiLogoFacebook />
 				</li>
 
-				<li className="mr-5 text-white text-[20px]">
+				<li className="mr-5 text-white text-[20px] hover:cursor-pointer">
 					<BiLogoYoutube />
 				</li>
-				<li className="mr-5 text-white text-[20px]">
+				<li className="mr-5 text-white text-[20px] hover:cursor-pointer">
 					<BiLogoTiktok />
 				</li>
 			</ul>

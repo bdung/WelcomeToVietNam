@@ -19,6 +19,7 @@ import LoginScreen from "./pages/Login";
 import Register from "./pages/Register";
 import Search from "./user/Search";
 import Test from "./user/Test.jsx";
+import AboutMe from "./user/about/bodyAbout";
 
 function Page(props) {
 	if (props === 1) return <UserHomePage />;
@@ -56,6 +57,7 @@ const App = () => {
 					<Route path="/register" element={<Register />} />
 
 					<Route path="/create-post" element={<CreatePostScreen />} />
+					<Route path="/about" element={<AboutMe />} />
 					<Route path="*" element={<Error />} />
 				</Route>
 
