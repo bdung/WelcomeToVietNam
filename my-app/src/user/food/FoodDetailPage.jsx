@@ -23,13 +23,18 @@ export default function FoodDetailPage() {
 
 	return (
 		<React.Fragment>
+			<div className="z-10 absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 
+            text-5xl md:text-5xl lg:text-6xl text-bold text-gray-100
+            drop-shadow be-viet-nam-pro-regular">
+						Ẩm thực Việt Nam đa dạng như thế nào?
+			</div>
 			<div
 				style={{
 					backgroundImage: `url(${THUMBNAIL})`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 				}}
-				className="z-1 max-w-full h-[30rem] w-full m-auto relative group bg-opacity-70 "
+				className="z-1 max-w-full h-[30rem] w-full m-auto relative group bg-opacity-70 brightness-50"
 			>
 				<div className="thumbnail">
 					<div class="z-10 absolute right-5 bottom-5">
@@ -42,13 +47,7 @@ export default function FoodDetailPage() {
 						</div>
 						{/* <BsBookmark class="text-5xl md:text-5xl lg:text-6xl text-white cursor-pointer" /> */}
 					</div>
-					<div
-						className="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-            text-5xl md:text-5xl lg:text-6xl text-bold text-white
-            drop-shadow be-viet-nam-pro-regular"
-					>
-						Ẩm thực Việt Nam đa dạng như thế nào?
-					</div>
+					
 				</div>
 			</div>
 			<FoodDetailBody />
