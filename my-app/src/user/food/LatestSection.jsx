@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import { useState, useEffect } from 'react';
 import BlogPost from './BlogPost';
-import PaginationBar from './PaginationBar';
+import PaginationBar from '../../components/PaginationBar';
 import FOOD1 from "../../assets/images/food1.jpg";
 import FOOD2 from "../../assets/images/food2.jpg";
 import FOOD3 from "../../assets/images/food3.jpg";
@@ -80,25 +80,9 @@ const LatestSection = () => {
         
     ];
 
-    // const [data, setData] = useState({})
-    // const [page, setPage] = useState(1)
-
-    // useEffect(() => {
-
-    //     const getAllPosts = async() => {
-    //         try {
-                
-    //             setData({
-    //                 list: data?.data,
-    //                 totalPage: data?.pagination?.totalPage
-    //             })
-    //         } catch (error) {
-                
-    //         }
-    //     }
-    // },[]);
-
-    
+    const totalPages = 10;
+    const limit = 5;
+    const [page, setPage] = useState(1);
     
     return (
         <React.Fragment>
@@ -113,7 +97,7 @@ const LatestSection = () => {
             </div>
             {/* Pagination */}
             <div className="mt-10 flex items-center justify-center max-w-screen-lg container mx-auto">
-                <PaginationBar total={5} current={2}/>
+                <PaginationBar total={totalPages} limit={limit} current={page} onChange={(page)=>setPage(page)}/>
             </div>
             
             

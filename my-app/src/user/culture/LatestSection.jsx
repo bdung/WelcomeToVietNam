@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import { useState, useEffect } from 'react';
 import BlogPost from '../../components/SmallPost';
-import PaginationBar from './PaginationBar';
+import PaginationBar from '../../components/PaginationBar';
 
 const LatestSection = () => {
 
@@ -89,6 +89,10 @@ const LatestSection = () => {
 
     ];
 
+    const totalPages = 10;
+    const limit = 5;
+    const [page, setPage] = useState(1)
+
     return (
         <React.Fragment>
             <div class="container mx-auto">
@@ -104,7 +108,7 @@ const LatestSection = () => {
                 </div>
                 {/* Pagination */}
                 <div className="mt-10 mb-20 flex items-center justify-center max-w-screen-lg container mx-auto">
-                    <PaginationBar total={5} current={2} />
+                    <PaginationBar total={totalPages} limit={limit} current={page} onChange={(page)=>setPage(page)}/>
                 </div>
             </div>
 
