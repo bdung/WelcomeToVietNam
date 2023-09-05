@@ -96,29 +96,9 @@ const LatestSection = () => {
         
     ];
 
-<<<<<<< HEAD
     const totalPages = 10;
     const limit = 5;
     const [page, setPage] = useState(1);
-=======
-    // const [data, setData] = useState({})
-    // const [page, setPage] = useState(1)
-
-    // useEffect(() => {
-
-    //     const getAllPosts = async() => {
-    //         try {
-                
-    //             setData({
-    //                 list: data?.data,
-    //                 totalPage: data?.pagination?.totalPage
-    //             })
-    //         } catch (error) {
-                
-    //         }
-    //     }
-    // },[]);
->>>>>>> 486801f7ddf64dbd9f10fea37a3d0f3a52f7cfa1
     
     return (
         <React.Fragment>
