@@ -7,7 +7,9 @@ const Footer = () => {
       <div>
         <div className='font-semibold mb-3 text-xl'>Liên hệ với chúng tôi</div>
         <ul className='font-light '>
-          <li className='mb-3'>welcometovietnam@gmail.com</li>
+          <li className='mb-3'>Kênh thông tin: <i>info@welcometovietnam.com</i></li>
+          <li className='mb-3'>Kênh hỗ trợ khách hàng: <i>support@welcometovietnam.com</i></li>
+          <li className='mb-3'>Kênh liên lạc: <i>contact@welcometovietnam.com</i></li>
           <li>(+84) 123 456 789</li>
         </ul>
       </div>
@@ -36,7 +38,7 @@ const Footer = () => {
         <div className='mb-3 font-semibold text-xl'>Tìm kiếm</div>
         <div className='relative inline-block'>
           <TfiSearch className='absolute text-black mt-3 ml-3'/>
-        <input className='rounded-2xl border-solid boder-2 border-white-8 w-60 h-10 text-black pl-10 text-sm' type='text'/>
+        <input className='rounded-2xl border-solid boder-2 border-white-8 w-60 h-10 text-black pl-10 text-sm' type='text' placeholder='Tìm kiếm bài viết'/>
         </div>
        
       </div>
