@@ -2,6 +2,7 @@ import React from "react";
 import HomeImg from "../assets/images/home_img.png";
 import SmallPost from "../components/SmallPost";
 import { FaAngleRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function UserHomePage() {
 	const postsCulture = [
@@ -71,13 +72,13 @@ export default function UserHomePage() {
 	const postsTravel = [
 		{
 			id: "1",
-			page: "travel",
-			url: "https://as2.ftcdn.net/v2/jpg/02/84/81/79/1000_F_284817904_ox8667zRGi9LQl4ocAGlNoV7kkqImkuQ.jpg",
-			title: "Ruộng bậc thang Hà Giang - nét đẹp miền núi...",
+			url: "https://www.remotelands.com/remotenew1/dist/images/country/vietnam/city/13100104/b201009113.jpg",
+			title: "Thiên đường bí ẩn trong lòng đất - Sơn Đoòng Việt Nam",
 			uploadTime: "03/04/2023",
 			timeForRead: "3 phút đọc",
-			like: "10",
-			comment: "2",
+			like: "1130",
+			comment: "244",
+			page: "travel",
 		},
 		{
 			id: "2",
@@ -144,6 +145,13 @@ export default function UserHomePage() {
 		},
 	];
 
+	const filter = [
+		{ name: "Tất cả", href: "#" },
+		{ name: "Du lịch", href: "#" },
+		{ name: "Ẩm thực", href: "#" },
+		{ name: "Văn hóa", href: "#" },
+	];
+
 	return (
 		<React.Fragment>
 			<div className="absolute text-white ml-9 mt-40  font-poppins">
@@ -171,22 +179,22 @@ export default function UserHomePage() {
 						<SmallPost postInfo={post} key={postIndex} />
 					))}
 				</div>
-				<div className="text-black  ">
+				<a className="text-black hover:underline " href="/travel">
 					<div className="font-bold text-6xl mb-6">DU LỊCH</div>
 					<div className="font-lg  text-lg w-80 ">
 						Bao gồm các bài viết về các địa điểm du lịch và những
 						trải nghiệm ở đó.
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<div className="flex justify-around items-center font-poppins  ">
-				<div className="text-black  ">
+				<a href="/food" className="text-black hover:underline ">
 					<div className="font-bold text-6xl mb-6">ẨM THỰC</div>
 					<div className=" font-base font-medium text-lg w-80 ">
 						Những món ăn ngon đặc trưng cho các vùng miền.
 					</div>
-				</div>
+				</a>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-7/12 pt-24  ">
 					{postsFood.map((post, postIndex) => (
 						<SmallPost postInfo={post} key={postIndex} />
@@ -200,37 +208,36 @@ export default function UserHomePage() {
 						<SmallPost postInfo={post} key={postIndex} />
 					))}
 				</div>
-				<div className="text-black font-poppins ">
+				<a
+					href="/culture"
+					className="text-black font-poppins hover:underline "
+				>
 					<div className="font-bold text-6xl mb-6">VĂN HÓA</div>
 					<div className="font-medium font-base  text-lg w-80 ">
 						Bao gồm các bài viết về văn hóa đặc sắc mang đậm bản sắc
 						dân tộc của Việt Nam.
 					</div>
-				</div>
+				</a>
 			</div>
 			<div className="pl-20">
 				<div className="font-medium text-4xl mb-6">
 					CÁC BÀI VIẾT NÊN ĐỌC
 				</div>
 				<ul className="text-black-800 flex">
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10  ">
-						Tất cả
-					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10 ">
-						{" "}
-						Du lịch
-					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
-						Ẩm thực
-					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
-						Văn hóa
-					</li>
+					{filter.map((item) => (
+						<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10">
+							<NavLink
+								aria-current={item.current ? "page" : undefined}
+							>
+								{item.name}
+							</NavLink>
+						</li>
+					))}
 				</ul>
 			</div>
 
 			<div className="mt-10 flex items-center justify-center max-w-screen-lg mx-auto relative mb-20">
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mr-10">
+				<div className="flex-x-auto flex gap-4 overflow-x-auto mr-10">
 					{postsHighlight.map((post, postIndex) => (
 						<SmallPost postInfo={post} key={postIndex} />
 					))}

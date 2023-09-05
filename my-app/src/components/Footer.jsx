@@ -15,11 +15,11 @@ const Footer = () => {
       <div>
         <div className='mb-3 font-semibold text-xl'>Nội dung trang</div>
         <ul className='font-light '>
-          <li className='mb-3'>Trang chủ</li>
-          <li className='mb-3'>Du lịch</li>
-          <li className='mb-3'>Văn hóa</li>
-          <li className='mb-3'>Ẩm thực</li>
-          <li>Về chúng tôi</li>
+          <li className='mb-3'><a href='/'>Trang chủ</a></li>
+          <li className='mb-3'><a href='/travel'>Du lịch</a></li>
+          <li className='mb-3'><a href='/culture'>Văn hóa</a></li>
+          <li className='mb-3'><a href='/food'>Ẩm thực</a></li>
+          <li><a href='/about'></a>Về chúng tôi</li>
         </ul>
       </div>
       <div>

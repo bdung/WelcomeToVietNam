@@ -19,6 +19,7 @@ import LoginScreen from "./pages/Login";
 import Register from "./pages/Register";
 import Search from "./user/Search";
 import Test from "./user/Test.jsx";
+import AboutMe from "./user/about/bodyAbout";
 
 function Page(props) {
 	if (props === 1) return <UserHomePage />;
@@ -35,24 +36,19 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<UserLayout />}>
 					<Route path="" element={Page(props)} />
-					<Route path="travel" element={<TravelHomePage />}>
-						<Route
-							path="detail/:blogId"
-							element={<DetailedTravelBlog />}
-						/>
-					</Route>
-
-
-					<Route path="food" element={<FoodScreen />}>
-						<Route
-							path="detail/:blogId"
-							element={<DetailedFoodBlog />}
-						/>
-					</Route>
-					<Route path="food" element={<FoodScreen />} />
+					<Route path="travel" element={<TravelHomePage />}></Route>
+					<Route
+						path="travel/detail/:blogId"
+						element={<DetailedTravelBlog />}
+					/>
+					<Route path="food" element={<FoodScreen />}></Route>
+					<Route
+						path="food/detail/:blogId"
+						element={<DetailedFoodBlog />}
+					/>
 					<Route path="culture" element={<CultureScreen />} />
 					<Route
-						path="/culture/detail/:blogId"
+						path="culture/detail/:blogId"
 						element={<DetailedCultureBlog />}
 					/>
 					<Route path="/search" element={<Search />} />
@@ -60,13 +56,10 @@ const App = () => {
 					<Route path="/login" element={<LoginScreen />} />
 					<Route path="/register" element={<Register />} />
 
-					<Route path="/login" element={<LoginScreen />} />
-					<Route path="/register" element={<Register />} />
-					<Route path="/admin" element={<AdminHomeScreen />}>
-					</Route>
+					<Route path="/create-post" element={<CreatePostScreen />} />
+					<Route path="/about" element={<AboutMe />} />
+					<Route path="*" element={<Error />} />
 				</Route>
-				<Route path="/create-post" element={<CreatePostScreen />} />
-				<Route path="*" element={<Error />} />
 
 				<Route path="/admin" element={<AdminLayout />}>
 					<Route path="" element={<DashboardAdminScreen />} />
