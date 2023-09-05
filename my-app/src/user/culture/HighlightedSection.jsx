@@ -36,12 +36,12 @@ const HighlightedSection = () => {
     },
     {
       id: 4,
-      url: "http://localhost:3000/assets/culture_blog_03.jpg",
-      title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-      uploadTime: "03/04/2023",
+      url: "https://accgroup.vn/wp-content/uploads/2023/02/van-hoa-la-gi-dac-trung-chuc-nang-co-cau-va-vai-tro-cua-van-hoa.png.webp",
+      title: `Bản chất của văn hóa là gì? Chúng ta nên tìm hiểu về văn hóa dân tộc"`,
+      uploadTime: "03/09/2023",
       timeForRead: "2 phút đọc",
-      like: "420",
-      comment: "13",
+      like: "242",
+      comment: "23",
       page: 'culture'
     },
 
