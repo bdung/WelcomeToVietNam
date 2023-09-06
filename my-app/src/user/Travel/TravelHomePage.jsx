@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LandingImg from "../../assets/images/landing.travel.png";
 import SmallPost from "../../components/SmallPost";
 import { FaAngleRight } from "react-icons/fa";
@@ -10,7 +10,7 @@ import HaLongImg from "../../assets/images/ha_long_bay.travel.jpg";
 import HoGuomImg from "../../assets/images/ho_guom.travel.jpg";
 // import Coverflow from "react-coverflow";
 import BannerSmallPost from "../../components/BannerSmallPost";
-
+import PaginationBar from "../../components/PaginationBar";
 export default function TravelHomePage() {
 	const lastestPost = [
 		{
@@ -169,7 +169,9 @@ export default function TravelHomePage() {
 			page: "travel",
 		},
 	];
-
+	const totalPages = 10;
+	const limit = 5;
+	const [page, setPage] = useState(1);
 	return (
 		<React.Fragment>
 			<div className="relative flex">
@@ -192,7 +194,6 @@ export default function TravelHomePage() {
 						</div>
 						{/* </div> */}
 					</div>
-					
 				</div>
 
 				<div className="absolute top-0 right-0 w-7/12 h-1/3 flex flex-col justify-between mt-20">
@@ -205,32 +206,27 @@ export default function TravelHomePage() {
 				</div>
 			</div>
 
-			<div className="pl-10 ">
-				<div className="font-medium text-4xl mb-6 mt-20">
+			<div className="pl-10 text-center justify-center ">
+				<div className="font-medium text-4xl mb-6 mt-20 ">
 					CÁC BÀI VIẾT NÊN ĐỌC
 				</div>
-				<ul className="text-black-800 flex">
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10  ">
+				<ul className="text-black-800 flex text-center justify-center">
+					<li className="font-poppins font-normal cursor-pointer text-[18px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10  ">
 						Tất cả
 					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10 ">
+					<li className="font-poppins font-normal cursor-pointer text-[18px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10 ">
 						{" "}
 						Phiêu lưu
 					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
+					<li className="font-poppins font-normal cursor-pointer text-[18px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
 						Du lịch
 					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
+					<li className="font-poppins font-normal cursor-pointer text-[18px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
 						Thiên nhiên
 					</li>
-					<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
+					<li className="font-poppins font-normal cursor-pointer text-[18px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10 ">
 						Hiện đại
 					</li>
-					<div className="ml-auto">
-						<span className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2 mr-10">
-							Xem tất cả
-						</span>
-					</div>
 				</ul>
 			</div>
 
@@ -255,12 +251,20 @@ export default function TravelHomePage() {
 				</div>
 			</div>
 
-			<div className="flex justify-around items-center font-poppins mb-40">
+			<div className="flex justify-around items-center font-poppins mb-20">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-9/12 pt-10 ">
 					{lastestPost.map((post, postIndex) => (
 						<SmallPost postInfo={post} key={post.id} />
 					))}
 				</div>
+			</div>
+			<div className="flex items-center justify-center max-w-screen-lg container mx-auto">
+				<PaginationBar
+					total={totalPages}
+					limit={limit}
+					current={page}
+					onChange={(page) => setPage(page)}
+				/>
 			</div>
 		</React.Fragment>
 	);

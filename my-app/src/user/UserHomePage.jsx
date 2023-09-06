@@ -225,7 +225,7 @@ export default function UserHomePage() {
 				</div>
 				<ul className="text-black-800 flex">
 					{filter.map((item) => (
-						<li className="font-poppins font-normal cursor-pointer text-[14px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10">
+						<li className="font-poppins font-normal cursor-pointer text-[18px] hover:underline decoration-900 underline-offset-8 decoration-2  mr-10">
 							<NavLink
 								aria-current={item.current ? "page" : undefined}
 							>

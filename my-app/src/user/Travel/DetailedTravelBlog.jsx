@@ -20,8 +20,8 @@ export default function DetailedTravelBlog() {
 		{
 			id: 1,
 			page: "travel",
-			url: HoiAnImg,
-			title: "Hội An - Nơi giao thoa văn hóa và nét đẹp kiến trúc...",
+			url: "https://th.bing.com/th/id/R.31b1a3c70ca6909249262e0ce5ef6613?rik=z7k6m6FPkmWR%2bw&riu=http%3a%2f%2ftourdulichhalonggiare.com%2fwp-content%2fuploads%2f2019%2f10%2fHang-Dau-Go-4.jpg&ehk=k9EeAzdmirWvEnc4YWFh9nI2NC8nh1Qqq2aCsfsatLE%3d&risl=&pid=ImgRaw&r=0",
+			title: "Hang Đầu Gỗ, Hạ Long, Tỉnh Quảng Ninh",
 			uploadTime: "03/04/2023",
 			timeForRead: "2 phút đọc",
 			like: "420",
@@ -30,8 +30,8 @@ export default function DetailedTravelBlog() {
 		{
 			id: 2,
 			page: "travel",
-			url: HoGuomImg,
-			title: "Hồ Gươm - Điểm đến không thể bỏ qua khi đến Hà Nội",
+			url: "https://th.bing.com/th/id/OIP.b_5OBabmsjUtE8OgG2a2tQHaEq?pid=ImgDet",
+			title: "Động Thiên Đường, Vườn Quốc Gia Phong Nha – Kẻ Bàng, Tỉnh Quảng Bình",
 			uploadTime: "03/04/2023",
 			timeForRead: "2 phút đọc",
 			like: "420",
@@ -40,8 +40,8 @@ export default function DetailedTravelBlog() {
 		{
 			id: 3,
 			page: "travel",
-			url: NhaThoImg,
-			title: "Nhà thờ Đức Bà - Biểu tượng kiến trúc của Sài Gòn",
+			url: "https://www.tuannguyentravel.com/data/images/vuon-quoc-gia-phong-nha-ke-bang-quang-binh-1.jpg",
+			title: "Hang Va, Vườn Quốc Gia Phong Nha – Kẻ Bàng, Tỉnh Quảng Bình",
 			uploadTime: "05/04/2023",
 			timeForRead: "4 phút đọc",
 			like: "329",
@@ -50,8 +50,8 @@ export default function DetailedTravelBlog() {
 		{
 			id: 4,
 			page: "travel",
-			url: HaLongImg,
-			title: "Vịnh Hạ Long - Nơi gặp gỡ giữa trời đất và biển cả",
+			url: "https://quangbinhtourism.vn/wp-content/uploads/2019/06/he-thong-hang-dong-tu-lan-01.jpg",
+			title: "Hệ Thống Hang Động Tú Làn, Tỉnh Quảng Bình",
 			uploadTime: "03/04/2023",
 			timeForRead: "2 phút đọc",
 			like: "420",
