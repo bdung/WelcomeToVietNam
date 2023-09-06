@@ -10,7 +10,7 @@ import {
 	Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import SmallPost from "../components/SmallPost";
-import Pagination from "./food/PaginationBar";
+import PaginationBar from '../components/PaginationBar';
 
 const sortOptions = [
 	{ name: "Phổ biến nhất", href: "#", current: true },
@@ -148,6 +148,11 @@ function Search() {
 			comment: "50",
 		},
 	];
+
+	const totalPages = 10;
+    const limit = 5;
+    const [page, setPage] = useState(1);
+
 	return (
 		<React.Fragment>
 			<div>
@@ -348,7 +353,7 @@ function Search() {
 									</div>
 									{/* Pagination */}
 									<div className="mt-10 flex items-center justify-center max-w-screen-lg container mx-auto">
-										<Pagination total={5} current={2} />
+									<PaginationBar total={totalPages} limit={limit} current={page} onChange={(page)=>setPage(page)}/>
 									</div>
 								</div>
 							</div>

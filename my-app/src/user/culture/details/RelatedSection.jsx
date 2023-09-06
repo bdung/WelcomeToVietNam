@@ -6,45 +6,45 @@ import { FaAngleRight } from "react-icons/fa";
 const RelatedSection = () => {
   const posts = [
     {
-      id: 1,
-      url: "http://localhost:3000/assets/culture_blog_01.jpg",
-      title: "Đấu tranh bảo vệ các giá trị văn hóa truyền thống",
-      uploadTime: "03/04/2023",
-      timeForRead: "3 phút đọc",
-      like: "1130",
-      comment: "244",
-      page: 'culture'
-    },
-    {
-      id: 2,
-      url: "http://localhost:3000/assets/culture_blog_02.jpg",
-      title: "Bộ VHTTDL sẽ tổ chức Triển lãm Du lịch qua các miền Di sản...",
-      uploadTime: "05/04/2023",
+      id: 9,
+      url: "https://file3.qdnd.vn/data/images/0/2023/08/30/nguyenchihoa/201216-unnamedok_large.jpg?dpi=150&quality=100&w=870",
+      title: `Nhận diện và đấu tranh với các thủ đoạn chống phá trên không gian mạng`,
+      uploadTime: "03/09/2023",
       timeForRead: "4 phút đọc",
-      like: "329",
-      comment: "50",
+      like: "810",
+      comment: "23",
       page: 'culture'
-    },
-    {
-      id: 3,
-      url: "http://localhost:3000/assets/culture_blog_03.jpg",
-      title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-      uploadTime: "03/04/2023",
-      timeForRead: "2 phút đọc",
-      like: "420",
-      comment: "13",
+  },
+  {
+      id: 10,
+      url: "https://file3.qdnd.vn/data/images/0/2022/12/05/thuthuytv/1%202.jpg",
+      title: `Nhận diện và phòng ngừa các thủ đoạn lợi dụng tôn giáo chống phá Việt Nam hiện nay`,
+      uploadTime: "05/12/2022",
+      timeForRead: "3 phút đọc",
+      like: "620",
+      comment: "12",
       page: 'culture'
-    },
-    {
-      id: 4,
-      url: "http://localhost:3000/assets/culture_blog_03.jpg",
-      title: `Triển lãm "Không gian Di sản Văn hóa Việt Nam"`,
-      uploadTime: "03/04/2023",
-      timeForRead: "2 phút đọc",
-      like: "420",
-      comment: "13",
+  },
+  {
+      id: 11,
+      url: "https://file3.qdnd.vn/data/images/0/2022/10/02/vuhuyen/dang%201.jpg",
+      title: `Phê phán những luận điệu phủ nhận con đường đi lên chủ nghĩa xã hội ở Việt Nam`,
+      uploadTime: "03/10/2022",
+      timeForRead: "8 phút đọc",
+      like: "176",
+      comment: "17",
       page: 'culture'
-    },
+  },
+  {
+      id: 12,
+      url: "https://file3.qdnd.vn/data/images/0/2023/08/27/nguyenthao/hoi%20nhap%20quoc%20te.jpg",
+      title: `Sự phi lý của luận điệu “Không thể có độc lập, tự chủ trong hội nhập quốc tế ở Việt Nam”`,
+      uploadTime: "29/04/2023",
+      timeForRead: "5 phút đọc",
+      like: "120",
+      comment: "4",
+      page: 'culture'
+  }
 
   ];
 
