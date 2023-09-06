@@ -161,29 +161,8 @@ function Search() {
 				>
 					<div className="">
 						<div className="font-bold text-6xl mb-5  flex justify-center items-center ">
-							Tìm kiếm
+							Kết quả tìm kiếm
 						</div>
-						<form className="w-[500px] relative ">
-							<div className="relative ">
-								<input
-									type="search"
-									placeholder="Nhập bài viết cần tìm.."
-									className="w-full p-4 rounded-full bg-white-500 bg-obacity-30 text-black "
-									onChange={(e) => handleSearch(e)}
-								/>
-								<button className="absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-slate-600 rounded-full">
-									<AiOutlineSearch />
-								</button>
-							</div>
-
-							{activeSearch.length > 0 && (
-								<div className="absolute top-20 p-4 bg-slate-800 text-white w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col gap-2">
-									{activeSearch.map((s) => (
-										<span>{s}</span>
-									))}
-								</div>
-							)}
-						</form>
 					</div>
 				</div>
 				{/* <img src={search} className='h-[350px] w-full' /> */}

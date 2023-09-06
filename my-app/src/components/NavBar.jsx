@@ -25,6 +25,7 @@ function Navbar() {
 	return (
 		<nav className="z-10 w-full flex py-2 justify-between items-center navbar bg-black bg-opacity-30 absolute">
 			<div className=" pl-10 relative inset-x-0 mt-5 mb-5">
+				<a href="/search">
 				<span class="absolute inset-y-0 left-10 flex items-center pl-2">
 					<button
 						type="submit"
@@ -44,6 +45,8 @@ function Navbar() {
 						</svg>
 					</button>
 				</span>
+				</a>
+				
 				<input
 					type="search"
 					name="q"
