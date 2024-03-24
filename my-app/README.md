@@ -1,7 +1,6 @@
 # WELCOME TO VIET NAM
 
-- Made with NodeJS language
-- Made with HTML/JS/CSS for Front-end
+- Made with ReactJS for Front-end
 - Made with library Tailwind UI
 - The Project of **UX/UI** Subject
 - Members of the Group 14:
